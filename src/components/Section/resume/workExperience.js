@@ -3,6 +3,7 @@ import { Fade, Zoom } from "react-reveal";
 import Icon from "../../../assets/images/work.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 import CertificateModal from "./certificateModal";
+import Image from "next/image";
 
 export default function WorkExperience({ work }) {
   const {
@@ -28,7 +29,7 @@ export default function WorkExperience({ work }) {
       <div className="p-6 flex items-center">
         <div className=" mr-6 hidden lg:block overflow-hidden">
           <Zoom>
-            <img src={Icon} alt="work_ico" className="w-64" />
+            <Image src={Icon} alt="work_ico" className="w-64" width={0} height={0} />
           </Zoom>
         </div>
         <div className="w-full">

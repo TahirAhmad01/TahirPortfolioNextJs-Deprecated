@@ -2,6 +2,7 @@ import React from "react";
 import { Fade, Zoom } from "react-reveal";
 import Icon from "../../../assets/images/university.png";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
+import Image from "next/image";
 
 export default function Education({ education }) {
   const {
@@ -19,7 +20,7 @@ export default function Education({ education }) {
       <div className="p-6 flex items-center">
         <div className=" mr-6 hidden lg:block overflow-hidden">
           <Zoom>
-            <img src={Icon} alt="work_ico" className="w-64" />
+            <Image src={Icon} alt="work_ico" className="w-64" height={0} width={0} />
           </Zoom>
         </div>
         <div className="w-full">

@@ -3,6 +3,7 @@ import { Fade, Zoom } from "react-reveal";
 import picture from "../../.../../../assets/images/myPic.jpg";
 import Title from "../title";
 import Info from "./info";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -50,7 +51,13 @@ export default function About() {
           </div>
           <Zoom>
             <div className="h-auto w-full mt-5 md:mt-0 overflow-hidden rounded-xl md:col-span-4 lg:col-span-4 aspect-[4/4]">
-              <img src={picture} alt="" className="w-full" />
+              <Image
+                src={picture}
+                alt=""
+                className="w-full"
+                width={0}
+                height={0}
+              />
             </div>{" "}
           </Zoom>
         </div>

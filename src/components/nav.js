@@ -40,7 +40,7 @@ export default function Navbar({ theme, toggleDarkMode }) {
             >
               <h4 className="flex items-center text-xl">
                 <div className="h-9 w-9 overflow-hidden rounded-full bg-transparent">
-                  <Image src={avatar} alt="avatar" width={0} />
+                  <Image src={avatar} alt="avatar" width={0} height={0} />
                 </div>
                 <div className="ml-3">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-extrabold text-2xl">

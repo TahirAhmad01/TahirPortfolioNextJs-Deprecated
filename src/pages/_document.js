@@ -46,12 +46,6 @@ export default function Document() {
           async
         ></script>
         <script
-          src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
-          integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
-          crossorigin="anonymous"
-          async
-        ></script>
-        <script
           src="https://kit.fontawesome.com/f70f4c2534.js"
           crossorigin="anonymous"
           async
