@@ -1,28 +1,37 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function BlogCard({ img, title, description }) {
+  const Img = ({src}) => {
+    return src
+  }
+
   return (
     <>
       <div className="w-full h-full flex flex-col my-3 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <a href="/#">
-          <img
+        <Link href="/#">
+          <Image
+          loader={Img}
             className="rounded-t-lg h-64 object-cover w-full"
             src={img}
-            alt=""
+            alt="qubartech blog"
+            width={0}
+            height={0}
           />
-        </a>
+        </Link>
         <div className="p-5 flex flex-col justify-between h-full">
-          <a
+          <Link
             href="/#"
             className="text-lg font-semibold  text-gray-900 dark:text-white flex-grow mb-[-15px]"
           >
             {title}
-          </a>
+          </Link>
           <div className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-3">
             <p>{description}</p>
           </div>
           <div>
-            <a
+            <Link
               href="/#"
               className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
@@ -40,7 +49,7 @@ export default function BlogCard({ img, title, description }) {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
