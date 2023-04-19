@@ -1,6 +1,7 @@
 import { Box, Modal, Typography } from "@mui/material";
 import React from "react";
 import projectList from "../../../utils/projectList";
+import Image from "next/image";
 
 const style = {
   position: "absolute",
@@ -25,13 +26,14 @@ function ProjectModal({ setOpen, open, projectId }) {
   content = findProject.map((project, idx) => {
     const { name, imageSrc, category, link, source, description } =
       project || {};
+      const src = imageSrc;
     return (
       <>
         <div
           className="min-h-[5vh] max-h-[42vh] overflow-hidden scrollbar-hide rounded-lg"
           key={idx}
         >
-          <img src={imageSrc} alt={name} />
+          <Image loader={() => src}  src={src} alt={name} width={0} height={0} className="w-full h-auto"/>
         </div>
         <div className="py-3 px-3">
           <Typography

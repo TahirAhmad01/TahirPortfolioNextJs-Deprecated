@@ -3,16 +3,16 @@ import Link from "next/link";
 import React from "react";
 
 export default function BlogCard({ img, title, description }) {
-  const Img = ({src}) => {
-    return src
-  }
+  const Img = ({ src }) => {
+    return src;
+  };
 
   return (
     <>
       <div className="w-full h-full flex flex-col my-3 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <Link href="/#">
           <Image
-          loader={Img}
+            loader={Img}
             className="rounded-t-lg h-64 object-cover w-full"
             src={img}
             alt="qubartech blog"

@@ -1,4 +1,5 @@
 import { Box, Modal } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 const style = {
@@ -21,10 +22,11 @@ function CertificateModal({ setOpen, open, contents }) {
 
   content = contents.map((cer, idx) => {
     const { image, title } = cer || {};
+    const src = image;
 
     return (
       <div className="overflow-auto scrollbar-hide rounded-lg" key={idx}>
-        <img src={image} alt={title} key={idx} />
+        <Image loader= {() => src} src={src} alt={title} key={idx} width={0} height={0} className="w-full h-auto"/>
       </div>
     );
   });

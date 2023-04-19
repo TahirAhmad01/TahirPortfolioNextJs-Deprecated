@@ -82,16 +82,20 @@ export default function WorkExperience({ work }) {
               {certificates &&
                 certificates.map((certificate, idx) => {
                   const { image, title } = certificate || {};
+                  const src = image
                   return (
                     <div
                       key={idx}
                       className="rounded-xl cursor-pointer flex items-center mt-3"
                       onClick={handleOpen}
                     >
-                      <img
-                        src={image}
+                      <Image
+                        loader={() => src}
+                        src={src}
                         alt={title}
                         className="w-28 rounded-md overflow-hidden"
+                        height={0}
+                        width={0}
                       />
                       <div className="ml-2 text-gray-400"> {title}</div>
                     </div>

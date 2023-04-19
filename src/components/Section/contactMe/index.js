@@ -6,6 +6,7 @@ import ThankYouImg from "../../../assets/images/thank-you-envelope.png";
 import Title from "../title";
 import ContactInp from "./contactInp";
 import SocialContact from "./socialContact";
+import Image from "next/image";
 
 export default function ContactMe() {
   const [loading, setLoading] = useState(false);
@@ -179,11 +180,13 @@ export default function ContactMe() {
             <div className="md:col-span-7 lg:col-span-8 w-full h-full flex items-center justify-center">
               <div className="flex flex-col items-center space-y-3">
                 <div className="w-32 h-32 flex items-center justify-center bg-green-500 rounded-full bg-gradient-to-tr from-green-400 via-blue-500 to-purple-600">
-                  <img
+                  <Image
                     src={ThankYouImg}
                     alt="thank-you-envelope"
                     border="0"
                     className="w-20"
+                    width={0}
+                    height={0}
                   />
                 </div>
                 <h1 className="text-4xl font-bold">Thank You !</h1>

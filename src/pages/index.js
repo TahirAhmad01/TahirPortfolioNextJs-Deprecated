@@ -7,16 +7,17 @@ import Resume from "@/components/Section/resume";
 import Blog from "@/components/Section/blog";
 import Testimonial from "@/components/Section/testimonial";
 import ContactMe from "@/components/Section/contactMe";
+import Head from "next/head";
 
 export default function Index() {
   return (
     <>
-      <head>
+      <Head>
         <title>Tahir Ahmad - Portfolio</title>
-      </head>
+      </Head>
 
+      <Home />
       <PageLayout>
-        <Home />
         <About />
         <Skill />
         <Project />
