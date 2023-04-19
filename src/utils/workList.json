@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "workTitle": "Front End Web Developer",
+    "startDate": "12-06-2020",
+    "endDate": "NOW",
+    "position": "React developer",
+    "location": "Dhaka, Bangladesh",
+    "description": "I am a web designer. Also, I am a React front-end developer. I have been doing web design for the last many years. I have worked in web design with HTML5, CSS3, CSS3 Animation, Bootstrap, JavaScript, JQuery, JQuery Animation, React. I am ready to convert your Html conversion ( PSD, image, pdf to Html ). I know many wonderful effects of use on websites and how to keep the website clean. Effective and clean cross-browser support has been a priority in many of the projects I've worked on.",
+    "certificates": ""
+  },
+  {
+    "id": 2,
+    "workTitle": "Kalpas innovation pvt. ltd",
+    "startDate": "29-12-2021",
+    "endDate": "29-04-2022",
+    "position": "React internship",
+    "location": " Hubballi, Karnataka, India",
+    "description": "During my internship at Kalpas Innovations Pvt. Ltd., located in Hubballi, Karnataka, India, I gained hands-on experience and in-depth knowledge in React.js, a popular JavaScript library for building user interfaces. Over the period of 29th December 2021 to 29th April 2022, I worked alongside a team of skilled developers, contributing to real-world projects and learning best practices in React.js development. During my internship, I had the opportunity to work on various tasks, such as creating interactive UI components, integrating APIs, optimizing performance, and troubleshooting issues. I also gained experience in using modern development tools and technologies, such as Axios, and Material-UI, to build efficient and scalable web applications.",
+    "certificates": [
+      {
+        "image": "https://i.ibb.co/m83Dqpr/Internship-Certificate.png",
+        "title": "internship certificate"
+      }
+    ]
+  }
+]

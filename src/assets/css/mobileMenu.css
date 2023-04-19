@@ -1,0 +1,53 @@
+.menu_icon {
+  width: 20px;
+  text-align: left;
+  margin-left: 13px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  height: 2px;
+  width: 100%;
+  border-radius: 3px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.bar2 {
+  width: 80%;
+}
+
+.bar3 {
+  width: 60%;
+}
+
+.bar2 {
+  margin: 5px 0;
+  position: relative;
+  left: 0;
+  opacity: 1;
+}
+
+.change .bar1 {
+  transform: rotate(45deg) translate(3px, 9px);
+}
+
+.change .bar2 {
+  position: relative;
+  left: 100%;
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(-45deg) translate(0px, -8px);
+  width: 100%;
+}
+
+.menu_icon:hover {
+  cursor: pointer;
+}
+
+.menu_icon:hover div {
+  background-color: #0fbcf9;
+}

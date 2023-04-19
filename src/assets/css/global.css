@@ -1,0 +1,105 @@
+@import "./mobileMenu.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply bg-gray-50 dark:bg-[#111827];
+  }
+
+  .customContainer {
+    @apply px-28 py-20;
+  }
+
+  .background {
+    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover;
+  }
+
+  .customButton {
+    @apply bg-white dark:bg-[#464f56]  h-[34px] w-[34px] md:h-[40px] md:w-[40px] text-[18px] md:text-[20px] m-[3px] md:m-[5px] hover:text-white md:rounded-xl rounded-lg dark:text-white;
+  }
+
+  .icons a i {
+    @apply w-full h-full flex justify-center items-center;
+  }
+
+  .projectBtn:hover div {
+    bottom: 0% !important;
+  }
+
+  /* container */
+  .containerCustom {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @screen md {
+    .containerCustom {
+      width: 750px;
+    }
+  }
+  @screen lg {
+    .containerCustom {
+      width: 970px;
+    }
+  }
+  @screen xl {
+    .containerCustom {
+      width: 1170px;
+    }
+  }
+
+  @screen 2xl {
+    .containerCustom {
+      width: 1230px;
+    }
+  }
+}
+
+/* owl-carousel */
+.owl-carousel .owl-item img {
+  width: auto !important;
+}
+
+/* arrow */
+.HorizontalScrollContainer_defaultRightArrow,
+.HorizontalScrollContainer_defaultLeftArrow {
+  border: solid #9a9a9a !important;
+  border-width: 0 3px 3px 0 !important;
+}
+
+.HorizontalScrollContainer_defaultArrowContainer {
+  min-width: 21px !important;
+}
+
+/* social button */
+.facebook:hover {
+  background-color: #4267b2;
+}
+
+.linkedin:hover {
+  background-color: #0a66c2;
+}
+.twitter:hover {
+  background-color: #1da1f2;
+}
+.instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+.github:hover {
+  background-color: #171515;
+}

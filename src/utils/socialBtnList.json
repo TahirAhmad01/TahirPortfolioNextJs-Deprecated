@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "link": "https://www.facebook.com/TahirAhmad01/",
+    "hover": "facebook",
+    "icon": "fab fa-facebook-f"
+  },
+  {
+    "id": 2,
+    "link": "https://www.linkedin.com/in/tahirahmad01/",
+    "hover": "linkedin",
+    "icon": "fab fa-linkedin-in"
+  },
+  {
+    "id": 3,
+    "link": "https://twitter.com/tahir_ahmad01",
+    "hover": "twitter",
+    "icon": "fab fa-twitter"
+  },
+  {
+    "id": 4,
+    "link": "https://www.instagram.com/tahir_ahmad01",
+    "hover": "instagram",
+    "icon": "fab fa-instagram"
+  },
+  {
+    "id": 5,
+    "link": "https://github.com/TahirAhmad01",
+    "hover": "github",
+    "icon": "fab fa-github"
+  }
+]
