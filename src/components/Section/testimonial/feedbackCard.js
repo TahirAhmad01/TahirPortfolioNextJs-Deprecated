@@ -7,13 +7,20 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-export default function FeedBackCard() {
+export default function FeedBackCard({ name, star, description }) {
+  const rating = [];
+  for (let i = 0; i < (star || 5); i++) {
+    rating.push(
+      <StarIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-300" />
+    );
+  }
+
   return (
     <div className="mx-3">
       <Card
         color="transparent"
         shadow={false}
-        className="w-full max-w-[45rem] mx-auto bg-white px-9 shadow-md my-2 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+        className="w-full max-w-[45rem] mx-auto bg-white px-5 py-1 shadow-md my-2 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
       >
         <CardHeader
           color="transparent"
@@ -26,28 +33,37 @@ export default function FeedBackCard() {
             variant="circle"
             src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
             alt="candice wu"
+            className="rounded-full"
           />
           <div className="flex w-full gap-0.5 justify-start md:justify-between flex-col md:flex-row">
             <div className="flex flex-col">
-              <Typography variant="h5" color="blue-gray" className="dark:text-gray-300">
-                Candice Wu
+              <Typography
+                variant="h5"
+                color="blue-gray"
+                className="dark:text-gray-300"
+              >
+                {name}
               </Typography>
-              <Typography color="blue-gray" className="dark:text-gray-400">Frontend Lead @ Google</Typography>
+              <Typography
+                color="blue-gray"
+                className="dark:text-gray-400 text-xs font-medium"
+              >
+                Frontend Lead @ Google
+              </Typography>
             </div>
             <div className="5 flex items-center gap-0">
+              {/* <StarIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-300" />
               <StarIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-300" />
               <StarIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-300" />
               <StarIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-300" />
-              <StarIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-300" />
-              <StarIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-300" />
+              <StarIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-300" /> */}
+              {rating}
             </div>
           </div>
         </CardHeader>
         <CardBody className="mb-6 p-0">
           <Typography className="text-center dark:text-gray-300">
-            &quot;I found solution to all my design needs from Creative Tim. I
-            use them as a freelancer in my hobby projects for fun! And its
-            really affordable, very humble guys !!!&quot;
+            {description}
           </Typography>
         </CardBody>
       </Card>

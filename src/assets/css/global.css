@@ -1,4 +1,9 @@
 @import "./mobileMenu.css";
+@import "./blur.css";
+@import "./mobileMenu.css";
+@import "./whatsappWidget.css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
@@ -69,14 +74,9 @@
 }
 
 /* arrow */
-.HorizontalScrollContainer_defaultRightArrow,
-.HorizontalScrollContainer_defaultLeftArrow {
-  border: solid #9a9a9a !important;
-  border-width: 0 3px 3px 0 !important;
-}
 
-.HorizontalScrollContainer_defaultArrowContainer {
-  min-width: 21px !important;
+.slick-dots li button:before {
+ color : #9a9a9a !important
 }
 
 /* social button */

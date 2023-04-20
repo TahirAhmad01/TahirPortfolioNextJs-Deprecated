@@ -26,14 +26,21 @@ function ProjectModal({ setOpen, open, projectId }) {
   content = findProject.map((project, idx) => {
     const { name, imageSrc, category, link, source, description } =
       project || {};
-      const src = imageSrc;
+    const src = imageSrc;
     return (
       <>
         <div
           className="min-h-[5vh] max-h-[42vh] overflow-hidden scrollbar-hide rounded-lg"
           key={idx}
         >
-          <Image loader={() => src}  src={src} alt={name} width={0} height={0} className="w-full h-auto"/>
+          <Image
+            loader={() => src}
+            src={src}
+            alt={name}
+            width={0}
+            height={0}
+            className="w-full h-auto"
+          />
         </div>
         <div className="py-3 px-3">
           <Typography
@@ -72,7 +79,7 @@ function ProjectModal({ setOpen, open, projectId }) {
             <div className="mt-3">
               {link && (
                 <a href={link} target="_blank" rel="noreferrer">
-                  <button className="bg-violet-700 hover:bg-violet-800 text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
+                  <button className="bg-[#7c3aed] hover:bg-[#5b21b6] text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
                     <i className="fa-solid fa-share-from-square mr-2"></i>
                     <span>Live Preview</span>
                   </button>
@@ -80,7 +87,7 @@ function ProjectModal({ setOpen, open, projectId }) {
               )}{" "}
               {source && (
                 <a href={source} target="_blank" rel="noreferrer">
-                  <button className="bg-slate-600 hover:bg-slate-700 text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
+                  <button className="bg-[#475569] hover:bg-[#334155] text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
                     <i className="fa-brands fa-github mr-2"></i>
                     <span>Github</span>
                   </button>

@@ -5,25 +5,21 @@ export default function Document() {
     <Html className="dark">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="shortcut icon"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.ico"
-        />
+        <link rel="shortcut icon" sizes="16x16" href="/favicon.ico" />
         <link
           rel="shortcut icon"
           sizes="32x32"
-          href="/favicon/favicon-32x32.ico"
+          href="/favicon.ico"
         />
         <link
           rel="shortcut icon"
           sizes="192x192"
-          href="/favicon/android-chrome-192x192.ico"
+          href="/favicon.ico"
         />
         <link
           rel="shortcut icon"
           sizes="512x512"
-          href="/favicon/android-chrome-512x512.ico"
+          href="/favicon.ico"
         />
         <link
           rel="apple-touch-icon"

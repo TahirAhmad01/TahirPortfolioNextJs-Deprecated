@@ -1,6 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
 import FeedbackCard from "./feedbackCard";
+import { Slide } from "react-reveal";
+import feedbackList from "@/utils/feedbackList.json";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -18,11 +20,13 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={`${className} before:text-gray-500 dark:before:text-gray-400 before:content-['←'] !hidden lg:!block`}
-      style={{ ...style}}
+      style={{ ...style }}
       onClick={onClick}
     />
   );
 }
+
+console.log(feedbackList);
 
 export default function FeedbackSlider(props) {
   const settings = {
@@ -43,30 +47,35 @@ export default function FeedbackSlider(props) {
     <>
       <div className="dark:!text-white">
         <Slider {...settings}>
+          {feedbackList.map((feedback, idx) => {
+            const { name, star, description } = feedback || {};
+            return (
+              <div>
+                <Slide up>
+                  <FeedbackCard
+                    name={name}
+                    star={star}
+                    description={description}
+                  />
+                </Slide>
+              </div>
+            );
+          })}
+          {/* <div>
+            <Slide up>
+              <FeedbackCard />
+            </Slide>
+          </div>{" "}
           <div>
-            <FeedbackCard />
-          </div>
+            <Slide up>
+              <FeedbackCard />
+            </Slide>
+          </div>{" "}
           <div>
-            <FeedbackCard />
-          </div>
-          <div>
-            <FeedbackCard />
-          </div>
-          <div>
-            <FeedbackCard />
-          </div>
-          <div>
-            <FeedbackCard />
-          </div>
-          <div>
-            <FeedbackCard />
-          </div>
-          <div>
-            <FeedbackCard />
-          </div>
-          <div>
-            <FeedbackCard />
-          </div>
+            <Slide up>
+              <FeedbackCard />
+            </Slide>
+          </div> */}
         </Slider>
       </div>
     </>

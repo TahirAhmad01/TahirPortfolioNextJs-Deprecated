@@ -1,5 +1,4 @@
 import React from "react";
-// import feedbackList from "../../../utils/feedbackList";
 import Title from "../title";
 // import Feedback from "./feedback";
 import SimpleSlider from "./Slider";
