@@ -1,8 +1,7 @@
-import React from "react";
+import feedbackList from "@/utils/feedbackList.json";
+import { Slide } from "react-awesome-reveal";
 import Slider from "react-slick";
 import FeedbackCard from "./feedbackCard";
-import { Slide } from "react-reveal";
-import feedbackList from "@/utils/feedbackList.json";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -26,8 +25,6 @@ function SamplePrevArrow(props) {
   );
 }
 
-console.log(feedbackList);
-
 export default function FeedbackSlider(props) {
   const settings = {
     dots: true,
@@ -45,13 +42,13 @@ export default function FeedbackSlider(props) {
 
   return (
     <>
-      <div className="dark:!text-white">
+      <div>
         <Slider {...settings}>
           {feedbackList.map((feedback, idx) => {
             const { name, star, description } = feedback || {};
             return (
               <div key={idx}>
-                <Slide up>
+                <Slide direction="up" triggerOnce >
                   <FeedbackCard
                     name={name}
                     star={star}

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import Image from "next/image";
+import { useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import Icon from "../../../assets/images/work.webp";
 import useWindowDimensions from "../../../hook/getWindowDimensions";
 import CertificateModal from "./certificateModal";
-import Image from "next/image";
 
 export default function WorkExperience({ work }) {
   const {
@@ -24,12 +24,20 @@ export default function WorkExperience({ work }) {
     setContent(certificates);
   };
 
+  // console.log(certificates)
+
   return (
     <>
       <div className="p-6 flex items-center">
         <div className=" mr-6 hidden lg:block overflow-hidden">
           <Zoom>
-            <Image src={Icon} alt="work_ico" className="w-64" width={0} height={0} />
+            <Image
+              src={Icon}
+              alt="work_ico"
+              className="w-64"
+              width={0}
+              height={0}
+            />
           </Zoom>
         </div>
         <div className="w-full">
@@ -82,7 +90,7 @@ export default function WorkExperience({ work }) {
               {certificates &&
                 certificates.map((certificate, idx) => {
                   const { image, title } = certificate || {};
-                  const src = image
+                  const src = image;
                   return (
                     <div
                       key={idx}
@@ -94,8 +102,8 @@ export default function WorkExperience({ work }) {
                         src={src}
                         alt={title}
                         className="w-28 rounded-md overflow-hidden"
-                        height={0}
-                        width={0}
+                        height={300}
+                        width={300}
                       />
                       <div className="ml-2 text-gray-400"> {title}</div>
                     </div>

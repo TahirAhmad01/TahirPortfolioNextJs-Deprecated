@@ -6,28 +6,16 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" sizes="16x16" href="/favicon.ico" />
-        <link
-          rel="shortcut icon"
-          sizes="32x32"
-          href="/favicon.ico"
-        />
-        <link
-          rel="shortcut icon"
-          sizes="192x192"
-          href="/favicon.ico"
-        />
-        <link
-          rel="shortcut icon"
-          sizes="512x512"
-          href="/favicon.ico"
-        />
+        <link rel="shortcut icon" sizes="32x32" href="/favicon.ico" />
+        <link rel="shortcut icon" sizes="192x192" href="/favicon.ico" />
+        <link rel="shortcut icon" sizes="512x512" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="apple-touch-icon"
           href="/favicon.ico"
         />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        
+        <link rel="manifest" href="/site.webmanifest" />
+        <title>Tahir Ahmad - Portfolio</title>
         <meta name="author" content="Qubartech" />
         <meta name="description" content="QubarTech is a tech farm company" />
         <meta

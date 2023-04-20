@@ -34,8 +34,6 @@ export default function Layout({ children }) {
     setLoading(false);
   }, [colorTheme, theme]);
 
-  console.log(theme);
-
   return (
     <div>
       {loading && <div>loading.......</div>}

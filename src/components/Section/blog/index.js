@@ -7,7 +7,7 @@ import BlogCard from "./blogCard";
 export default function Blog(props) {
   return (
     <>
-      <div className="containerCustom">
+      <div className="containerCustom gap">
         <Title title="blog" />
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {blogList.map((blog, idx) => {

@@ -35,7 +35,7 @@ export default function Navbar({ theme, toggleDarkMode }) {
             <Link
               href="/"
               onClick={() => {
-                // window.scrollTo({ top: 0, behavior: "smooth" });
+                window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
               <h4 className="flex items-center text-xl">
