@@ -50,7 +50,7 @@ export default function FeedbackSlider(props) {
           {feedbackList.map((feedback, idx) => {
             const { name, star, description } = feedback || {};
             return (
-              <div>
+              <div key={idx}>
                 <Slide up>
                   <FeedbackCard
                     name={name}

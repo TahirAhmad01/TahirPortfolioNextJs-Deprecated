@@ -24,9 +24,10 @@ export default function Document() {
         <link
           rel="apple-touch-icon"
           sizes="apple-touch-icon"
-          href="/favicon/apple-touch-icon.ico"
+          href="/favicon.ico"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
+        
         <meta name="author" content="Qubartech" />
         <meta name="description" content="QubarTech is a tech farm company" />
         <meta
