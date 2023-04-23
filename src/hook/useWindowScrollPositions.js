@@ -4,7 +4,6 @@ export const useWindowScrollPositions = () => {
   const [scrollPosition, setPosition] = useState({ scrollX: 0, scrollY: 0 });
 
   useEffect(() => {
-     if (typeof window !== "undefined") {
     function updatePosition() {
       setPosition({ scrollX: window.scrollX, scrollY: window.scrollY });
     }
@@ -13,7 +12,6 @@ export const useWindowScrollPositions = () => {
     updatePosition();
 
     return () => window.removeEventListener("scroll", updatePosition);
-  }
   }, []);
 
   return scrollPosition;
