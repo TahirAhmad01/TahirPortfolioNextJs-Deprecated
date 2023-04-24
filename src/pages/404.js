@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Helmet } from "react-helmet";
 import PageLayout from "../components/pageLayout";
 import Link from "next/link";
+import Head from "next/head";
 
 function PageNotFound() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>404 page not found - Tahir Ahmad</title>
-      </Helmet>
+      </Head>
 
       <PageLayout>
         <section className="flex items-center h-full p-16 dark:bg-gray-900 dark:text-gray-100 md:h-[calc(100vh-8rem)]">

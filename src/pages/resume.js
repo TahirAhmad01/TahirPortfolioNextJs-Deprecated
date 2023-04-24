@@ -1,14 +1,14 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import PageLayout from "../components/pageLayout";
 import ResumeSec from "../components/Section/resume";
+import Head from "next/head";
 
 export default function Resume() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Resume - Tahir Ahmad</title>
-      </Helmet>
+      </Head>
       <PageLayout>
         <ResumeSec />
       </PageLayout>

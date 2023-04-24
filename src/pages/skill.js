@@ -1,14 +1,14 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import PageLayout from "../components/pageLayout";
 import Skills from "../components/Section/skill";
+import Head from "next/head";
 
 export default function Skill() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Skill - Tahir Ahmad</title>
-      </Helmet>
+      </Head>
 
       <PageLayout>
         <Skills />

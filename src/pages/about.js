@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import PageLayout from "../components/pageLayout";
 import AboutMe from "../components/Section/about";
 import Head from "next/head";

@@ -11,7 +11,7 @@ import Head from "next/head";
 
 export default function Index() {
   return (
-    <>
+    <main>
       <Head>
         <title>Tahir Ahmad - Portfolio</title>
       </Head>
@@ -26,6 +26,6 @@ export default function Index() {
         <Testimonial />
         <ContactMe />
       </PageLayout>
-    </>
+    </main>
   );
 }

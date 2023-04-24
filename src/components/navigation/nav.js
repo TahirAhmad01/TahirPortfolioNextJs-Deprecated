@@ -1,12 +1,13 @@
+import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import SlideToggle from "react-slide-toggle";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import avatar from "../assets/images/logo.webp";
-import useWindowDimensions from "../hook/getWindowDimensions";
-import menuList from "../utils/manuList";
-import Link from "next/link";
-import Image from "next/image";
+import useWindowDimensions from "../../hook/getWindowDimensions";
+import avatar from "@/assets/images/logo.webp";
+import menuList from "@/utils/manuList";
+import MobileDrawer from "./mobileDrawer";
 
 export default function Navbar({ theme, toggleDarkMode }) {
   const [openMenu, setOpenMenu] = useState(false);
@@ -22,6 +23,11 @@ export default function Navbar({ theme, toggleDarkMode }) {
 
   const location = useRouter();
   const path = location.pathname;
+  const [isSidebarOpen, setSidebarOpen] = useState(width > 768);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <React.Fragment>
@@ -81,10 +87,7 @@ export default function Navbar({ theme, toggleDarkMode }) {
               className={`md:hidden  menu_icon flex flex-col items-start my-collapsible__toggle ${
                 openMenu && "change"
               }`}
-              onClick={() => {
-                toggle();
-                toggleMenu();
-              }}
+             onClick={toggleSidebar}
             >
               <div className="bar1 bg-black dark:bg-white"></div>
               <div className="bar2 bg-black dark:bg-white"></div>
@@ -92,7 +95,7 @@ export default function Navbar({ theme, toggleDarkMode }) {
             </div>
           </div>
         </div>
-        <SlideToggle duration={500} toggleEvent={toggleEvent} collapsed>
+        {/* <SlideToggle duration={500} toggleEvent={toggleEvent} collapsed>
           {({ setCollapsibleElement }) => (
             <div className={`${width > 768 && "hidden"}`}>
               <div
@@ -125,7 +128,8 @@ export default function Navbar({ theme, toggleDarkMode }) {
               </div>
             </div>
           )}
-        </SlideToggle>
+        </SlideToggle> */}
+        <MobileDrawer setSidebar={setSidebarOpen} isOpen={isSidebarOpen} />
       </div>
     </React.Fragment>
   );

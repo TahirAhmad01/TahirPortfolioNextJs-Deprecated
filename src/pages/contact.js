@@ -1,14 +1,14 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import PageLayout from "../components/pageLayout";
 import ContactMe from "../components/Section/contactMe";
+import Head from "next/head";
 
 export default function Contact() {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Contact - Tahir Ahmad</title>
-      </Helmet>
+      </Head>
 
       <PageLayout>
         <ContactMe />
