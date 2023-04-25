@@ -1,7 +1,6 @@
-import React from "react";
-import PageLayout from "../components/pageLayout";
-import ResumeSec from "../components/Section/resume";
-import Head from "next/head";
+import Head from 'next/head';
+import ResumeSec from '../components/Section/resume';
+import PageLayout from '../components/pageLayout';
 
 export default function Resume() {
   return (

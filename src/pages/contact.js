@@ -1,7 +1,6 @@
-import React from "react";
-import PageLayout from "../components/pageLayout";
-import ContactMe from "../components/Section/contactMe";
-import Head from "next/head";
+import Head from 'next/head';
+import ContactMe from '../components/Section/contactMe';
+import PageLayout from '../components/pageLayout';
 
 export default function Contact() {
   return (

@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import PageLayout from "../components/pageLayout";
-import Link from "next/link";
-import Head from "next/head";
+import Head from 'next/head';
+import Link from 'next/link';
+import PageLayout from '../components/pageLayout';
 
 function PageNotFound() {
   return (

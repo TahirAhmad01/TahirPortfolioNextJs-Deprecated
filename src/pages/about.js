@@ -1,7 +1,6 @@
-import React from "react";
-import PageLayout from "../components/pageLayout";
-import AboutMe from "../components/Section/about";
 import Head from "next/head";
+import AboutMe from "../components/Section/about";
+import PageLayout from "../components/pageLayout";
 
 export default function About() {
   return (

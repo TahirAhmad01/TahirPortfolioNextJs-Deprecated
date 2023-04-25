@@ -1,7 +1,6 @@
-import React from "react";
-import PageLayout from "../components/pageLayout";
-import Skills from "../components/Section/skill";
-import Head from "next/head";
+import Head from 'next/head';
+import Skills from '../components/Section/skill';
+import PageLayout from '../components/pageLayout';
 
 export default function Skill() {
   return (

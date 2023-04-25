@@ -1,12 +1,11 @@
+import avatar from "@/assets/images/logo.webp";
+import menuList from "@/utils/manuList";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import SlideToggle from "react-slide-toggle";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import useWindowDimensions from "../../hook/getWindowDimensions";
-import avatar from "@/assets/images/logo.webp";
-import menuList from "@/utils/manuList";
 import MobileDrawer from "./mobileDrawer";
 
 export default function Navbar({ theme, toggleDarkMode }) {

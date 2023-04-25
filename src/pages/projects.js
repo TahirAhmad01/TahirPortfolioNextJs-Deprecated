@@ -1,7 +1,6 @@
-import React from "react";
-import PageLayout from "../components/pageLayout";
-import Project from "../components/Section/project";
 import Head from "next/head";
+import Project from "../components/Section/project";
+import PageLayout from "../components/pageLayout";
 
 export default function Projects() {
   return (

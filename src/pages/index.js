@@ -1,12 +1,12 @@
 import About from "@/components/Section/about";
+import Blog from "@/components/Section/blog";
+import ContactMe from "@/components/Section/contactMe";
 import Home from "@/components/Section/home";
-import PageLayout from "@/components/pageLayout";
-import Skill from "@/components/Section/skill";
 import Project from "@/components/Section/project";
 import Resume from "@/components/Section/resume";
-import Blog from "@/components/Section/blog";
+import Skill from "@/components/Section/skill";
 import Testimonial from "@/components/Section/testimonial";
-import ContactMe from "@/components/Section/contactMe";
+import PageLayout from "@/components/pageLayout";
 import Head from "next/head";
 
 export default function Index() {

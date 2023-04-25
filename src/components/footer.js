@@ -1,4 +1,3 @@
-import React from "react";
 import socialBtnList from "../utils/socialBtnList.json";
 import SocialBtn from "./socialBtn";
 
