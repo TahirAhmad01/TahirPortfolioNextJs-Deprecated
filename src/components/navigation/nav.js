@@ -9,16 +9,11 @@ import useWindowDimensions from "../../hook/getWindowDimensions";
 import MobileDrawer from "./mobileDrawer";
 
 export default function Navbar({ theme, toggleDarkMode }) {
-  const [openMenu, setOpenMenu] = useState(false);
   const [toggleEvent, setToggleEvent] = useState(0);
 
   const { width } = useWindowDimensions();
 
   const toggle = () => setToggleEvent(Date.now());
-
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
-  };
 
   const location = useRouter();
   const path = location.pathname;
@@ -31,7 +26,7 @@ export default function Navbar({ theme, toggleDarkMode }) {
   return (
     <React.Fragment>
       <div
-        className={`backdrop-blur-xl bg-[#f1f5f9]/30 dark:bg-[#0b1327]/70 w-full top-0 left-0 fixed z-50 py-4 transition-all duration-200 border-b-2 border-inherit dark:border-gray-700 my-collapsible my-collapsible 
+        className={`backdrop-blur-xl bg-[#f1f5f9]/30 dark:bg-[#0b1327]/50 w-full top-0 left-0 fixed z-50 py-4 transition-all duration-200 border-b-2 border-inherit dark:border-gray-800/60 my-collapsible my-collapsible 
        
         `}
       >
@@ -83,14 +78,10 @@ export default function Navbar({ theme, toggleDarkMode }) {
               />
             </div>
             <div
-              className={`md:hidden  menu_icon flex flex-col items-start my-collapsible__toggle ${
-                openMenu && "change"
-              }`}
+              className="md:hidden flex flex-col items-start text-[1.9rem] ml-2"
              onClick={toggleSidebar}
             >
-              <div className="bar1 bg-black dark:bg-white"></div>
-              <div className="bar2 bg-black dark:bg-white"></div>
-              <div className="bar3 bg-black dark:bg-white"></div>
+              <i className='bx bx-menu-alt-left'></i>
             </div>
           </div>
         </div>

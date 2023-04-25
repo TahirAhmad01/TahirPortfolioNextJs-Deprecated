@@ -39,7 +39,7 @@ export default function MobileDrawer({ setSidebar, isOpen }) {
           >
             <div className="text-2xl pb-4 pt-5 bg-gray-50 dark:bg-[#111827] flex items-center px-4 justify-between font-medium border dark:border-gray-900">
               <div>Menu</div>
-              <div onClick={closeSidebar} className="text-2xl">
+              <div onClick={closeSidebar} className="text-[1.7rem]">
                 <i className="bx bx-x"></i>
               </div>
             </div>
