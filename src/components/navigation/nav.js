@@ -31,7 +31,7 @@ export default function Navbar({ theme, toggleDarkMode }) {
   return (
     <React.Fragment>
       <div
-        className={`backdrop-blur-xl bg-slate-100/40 dark:bg-[#0b1327]/70 w-full top-0 left-0 fixed z-50 py-4 transition-all duration-200 border-b-2 border-inherit dark:border-gray-700 my-collapsible my-collapsible 
+        className={`backdrop-blur-xl bg-[#f1f5f9]/30 dark:bg-[#0b1327]/70 w-full top-0 left-0 fixed z-50 py-4 transition-all duration-200 border-b-2 border-inherit dark:border-gray-700 my-collapsible my-collapsible 
        
         `}
       >
