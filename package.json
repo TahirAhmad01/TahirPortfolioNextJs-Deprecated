@@ -21,6 +21,7 @@
     "emailjs": "^4.0.1",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "flowbite": "^1.6.5",
     "framer-motion": "^10.12.4",
     "heroicons": "^2.0.17",
