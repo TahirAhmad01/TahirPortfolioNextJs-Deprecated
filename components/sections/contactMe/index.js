@@ -1,46 +1,47 @@
-import emailjs from "@emailjs/browser";
-import React, { useRef, useState } from "react";
-import { Fade } from "react-reveal";
-import swal from "sweetalert";
-import ThankYouImg from "../../../assets/images/thank-you-envelope.png";
-import Title from "../title";
-import ContactInp from "./contactInp";
-import SocialContact from "./socialContact";
-import Image from "next/image";
+import tellMeOn from '@/utils/tellMeOn';
+import emailjs from '@emailjs/browser';
+import Image from 'next/image';
+import { useRef, useState } from 'react';
+import { Fade } from 'react-reveal';
+import swal from 'sweetalert';
+import ThankYouImg from '../../../assets/images/thank-you-envelope.png';
+import Title from '../title';
+import ContactInp from './contactInp';
+import SocialContact from './socialContact';
 
 export default function ContactMe() {
   const [loading, setLoading] = useState(false);
   const [showContactForm, setShowContactForm] = useState(true);
   const form = useRef();
 
-  const sendEmail = async (e) => {
+  const sendEmail = async e => {
     e.preventDefault();
     setLoading(true);
 
     await emailjs
       .sendForm(
-        "service_sob3n6t", //SERVICE ID
-        "template_ol3bs8a", //TEMPLATE ID
+        'service_sob3n6t', //SERVICE ID
+        'template_ol3bs8a', //TEMPLATE ID
         form.current,
-        "q-Wr4qVce_T4pGFt2" // PUBLIC KEY
+        'q-Wr4qVce_T4pGFt2', // PUBLIC KEY
       )
       .then(
-        (result) => {
+        result => {
           swal({
-            title: "E-mail sent successful",
-            icon: "success",
-            button: "Close",
+            title: 'E-mail sent successful',
+            icon: 'success',
+            button: 'Close',
             dangerMode: true,
           }).then(setShowContactForm(false));
         },
-        (err) => {
+        err => {
           swal({
-            title: "Something went wrong",
-            icon: "error",
-            button: "close",
+            title: 'Something went wrong',
+            icon: 'error',
+            button: 'close',
             dangerMode: true,
           });
-        }
+        },
       );
 
     setLoading(false);
@@ -48,9 +49,9 @@ export default function ContactMe() {
 
   if (loading) {
     swal({
-      title: "Sending message",
-      icon: "warning",
-      text: "Please wait ...",
+      title: 'Sending message',
+      icon: 'warning',
+      text: 'Please wait ...',
       button: false,
       closeOnClickOutside: false,
     });
@@ -67,48 +68,18 @@ export default function ContactMe() {
                 Tell me on
               </h5>
               <ul className="my-4 space-y-3">
-                <SocialContact
-                  icon="fa-solid fa-envelope"
-                  name="email"
-                  link="mailto:tahirahmad0234@gmail.com"
-                  delay={100}
-                />
-                <SocialContact
-                  icon="fa-brands fa-whatsapp"
-                  name="whatsapp"
-                  link="https://wa.me/+8801610881871/"
-                  delay={150}
-                />
-                <SocialContact
-                  icon="fa-brands fa-facebook-messenger"
-                  name="messenger"
-                  link="https://www.messenger.com/t/tahirahmad01"
-                  delay={200}
-                />
-                <SocialContact
-                  icon="fab fa-line"
-                  name="line"
-                  link="https://line.me/ti/p/DTFqKxFPcn"
-                  delay={200}
-                />
-                <SocialContact
-                  icon="fab fa-linkedin-in"
-                  name="linkedin"
-                  link="https://www.linkedin.com/in/tahirahmad01/"
-                  delay={250}
-                />
-                <SocialContact
-                  icon="fab fa-twitter"
-                  name="twitter"
-                  link="https://twitter.com/tahir_ahmad01"
-                  delay={300}
-                />
-                <SocialContact
-                  icon="fab fa-instagram"
-                  name="instagram"
-                  link="https://www.instagram.com/tahir_ahmad01/"
-                  delay={350}
-                />
+                {tellMeOn.map((tellMe, idx) => {
+                  const { icon, name, link, delay } = tellMe || {};
+                  return (
+                    <SocialContact
+                      key={idx}
+                      icon={icon}
+                      name={name}
+                      link={link}
+                      delay={delay}
+                    />
+                  );
+                })}
               </ul>
             </div>
           </div>

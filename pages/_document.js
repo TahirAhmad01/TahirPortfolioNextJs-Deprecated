@@ -15,12 +15,11 @@ export default function Document() {
           href="/favicon.ico"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <title>Tahir Ahmad - Portfolio</title>
-        <meta name="author" content="Qubartech" />
-        <meta name="description" content="QubarTech is a tech farm company" />
+        <meta name="author" content="Qubartech Tahir Ahmad" />
+        <meta name="description" content="Hello! I Am Tahir Ahmad. I am web developer....." />
         <meta
           name="keywords"
-          content="Qubartech, tech, tech company, technology"
+          content="Qubartech, tech, tech company, technology, Tahir Ahamd, portfolio"
         />
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"

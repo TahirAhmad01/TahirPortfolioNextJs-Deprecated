@@ -1,19 +1,8 @@
-import { useEffect, useState } from "react";
-import Title from "../title";
-// import Skills from "./../../../utils/skillData.json";
-import axios from "axios";
-import ProgressBar from "./progressBar";
+import skillsList from '@/utils/skillData.json';
+import Title from '../title';
+import ProgressBar from './progressBar';
 
 export default function Skill() {
-  const [skillsList, setSkillsList] = useState([]);
-  
-  useEffect(()=> {
-    axios.get("/api/skillData").then((res) => {
-    console.log(res?.data);
-    setSkillsList(res?.data);
-  });
-  },[])
-
   return (
     <>
       <div className=" containerCustom gap">

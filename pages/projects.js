@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Project from "../components/Section/project";
+import Project from "../components/sections/project";
 import PageLayout from "../components/pageLayout";
 
 export default function Projects() {

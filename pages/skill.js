@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Skills from '../components/Section/skill';
+import Skills from '../components/sections/skill';
 import PageLayout from '../components/pageLayout';
 
 export default function Skill() {

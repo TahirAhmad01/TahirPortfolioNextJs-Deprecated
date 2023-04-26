@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import ContactMe from '../components/Section/contactMe';
+import ContactMe from '../components/sections/contactMe';
 import PageLayout from '../components/pageLayout';
 
 export default function Contact() {

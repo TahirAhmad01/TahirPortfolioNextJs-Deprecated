@@ -22,7 +22,7 @@ export default function Home() {
       <div className="w-full h-full background">
         {' '}
         <div className="h-auto md:h-full bg-black/15 pt-24 py-8 containerCustom relative z-10">
-          <div className="backdrop-blur-xl bg-white/60 dark:bg-[#0b1327]/60 rounded-2xl h-full w-full relative overflow-hidden">
+          <div className="backdrop-blur-xl bg-white/60 dark:bg-[#0b1327]/80 rounded-2xl h-full w-full relative overflow-hidden">
             <div
               className={`flex items-center justify-center flex-col overflow-hidden h-full w-full relative z-20 pt-20 md:pb-28 pb-32`}
             >

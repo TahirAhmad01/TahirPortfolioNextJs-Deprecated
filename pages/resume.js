@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import ResumeSec from '../components/Section/resume';
+import ResumeSec from '../components/sections/resume';
 import PageLayout from '../components/pageLayout';
 
 export default function Resume() {

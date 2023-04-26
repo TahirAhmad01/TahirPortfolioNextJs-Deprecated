@@ -1,0 +1,11 @@
+{
+  "heading": "Hello! I Am Tahir Ahmad.",
+  "description": "As an experienced front-end developer with React.js, I have been actively involved in web development since 2020. My skill set includes proficiency in HTML5, CSS3, CSS3 Animation, Bootstrap, JavaScript, jQuery, jQuery Animation, React.js, Redux, and Next.js. I am also adept at converting PSD, image, and PDF designs into clean and responsive HTML code. With a keen eye for creating stunning website effects and a focus on maintaining clean and effective cross-browser support, I ensure seamless performance across different platforms. I am also an active contributor to open-source projects on GitHub, showcasing my commitment to the development community. My expertise in clean coding practices ensures that I deliver efficient and maintainable code for optimal website performance.",
+
+  "information": [
+    { "id": 1, "name": "email", "details": "tahirahmad0234@gamil.com" },
+    { "id": 2, "name": "phone", "details": "+8801610881871" },
+    { "id": 3, "name": "phone", "details": "Rajshahi, Bangladesh" },
+    { "id": 4, "name": "status", "details": "Available" }
+  ]
+}

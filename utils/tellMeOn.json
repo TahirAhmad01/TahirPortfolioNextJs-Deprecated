@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "icon": "fa-solid fa-envelope",
+    "name": "email",
+    "link": "mailto:tahirahmad0234@gmail.com",
+    "delay": 100
+  },
+  {
+    "id": 2,
+    "icon": "fa-brands fa-whatsapp",
+    "name": "whatsapp",
+    "link": "https://wa.me/+8801610881871/",
+    "delay": 150
+  },
+  {
+    "id": 3,
+    "icon": "fa-brands fa-facebook-messenger",
+    "name": "messenger",
+    "link": "https://www.messenger.com/t/tahirahmad01",
+    "delay": 200
+  },
+  {
+    "id": 4,
+    "icon": "fab fa-line",
+    "name": "line",
+    "link": "https://line.me/ti/p/DTFqKxFPcn",
+    "delay": 200
+  },
+  {
+    "id": 5,
+    "icon": "fab fa-linkedin-in",
+    "name": "linkedin",
+    "link": "https://www.linkedin.com/in/tahirahmad01/",
+    "delay": 250
+  },
+  {
+    "id": 6,
+    "icon": "fab fa-twitter",
+    "name": "twitter",
+    "link": "https://twitter.com/tahir_ahmad01",
+    "delay": 300
+  },
+  {
+    "id": 7,
+    "icon": "fab fa-instagram",
+    "name": "instagram",
+    "link": "https://www.instagram.com/tahir_ahmad01/",
+    "delay": 350
+  }
+]
