@@ -5,7 +5,7 @@ function SocialBtn({ icon, hover, link }) {
     <>
       <a href={link} target="_blank" rel="noreferrer">
         <button className={`${hover} customButton duration-300`}>
-          <i className={`${icon}  hover:scale-110`}></i>
+          <i className={`${icon}  hover:scale-110`} aria-hidden="true"></i>
         </button>
       </a>
     </>
