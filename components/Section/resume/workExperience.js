@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { useState } from "react";
-import { Fade, Zoom } from "react-reveal";
-import Icon from "../../../assets/images/work.webp";
-import useWindowDimensions from "../../../hook/getWindowDimensions";
-import CertificateModal from "./certificateModal";
+import Image from 'next/image';
+import { useState } from 'react';
+import { Fade, Zoom } from 'react-reveal';
+import useWindowDimensions from '@/hook/getWindowDimensions';
+import Icon from '@/assets/images/work.webp';
+import CertificateModal from './certificateModal';
 
 export default function WorkExperience({ work }) {
   const {
@@ -55,7 +55,7 @@ export default function WorkExperience({ work }) {
                           <i className="bx bxs-briefcase-alt-2"></i> {position}
                         </span>
                         <span className="inline-flex items-center capitalize gap-1">
-                          <i className="fa-solid fa-location-dot text-xs"></i>{" "}
+                          <i className="fa-solid fa-location-dot text-xs"></i>{' '}
                           {location}
                         </span>
                       </div>

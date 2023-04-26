@@ -1,14 +1,14 @@
-import avatar from "@/assets/images/logo.webp";
-import menuList from "@/utils/manuList";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useState } from "react";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
-import useWindowDimensions from "../../hook/getWindowDimensions";
-import MobileDrawer from "./mobileDrawer";
+import avatar from '@/assets/images/logo.webp';
+import useWindowDimensions from '@/hook/getWindowDimensions';
+import menuList from '@/utils/manuList';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import MobileDrawer from './mobileDrawer';
 
-export default function Navbar({ theme, toggleDarkMode }) {
+export default function Navbar({ theme, toggleDarkMode, loading }) {
   const [toggleEvent, setToggleEvent] = useState(0);
 
   const { width } = useWindowDimensions();
@@ -35,7 +35,7 @@ export default function Navbar({ theme, toggleDarkMode }) {
             <Link
               href="/"
               onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
               <h4 className="flex items-center text-xl">
@@ -57,9 +57,9 @@ export default function Navbar({ theme, toggleDarkMode }) {
                   <Link href={menu?.link} className="capitalize" key={idx}>
                     <li
                       className={`px-3 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-medium ${
-                        path === menu?.link || path === menu?.link + "/"
-                          ? "text-transparent font-semibold"
-                          : ""
+                        path === menu?.link || path === menu?.link + '/'
+                          ? 'text-transparent font-semibold'
+                          : ''
                       }`}
                     >
                       {menu.name}
@@ -69,19 +69,21 @@ export default function Navbar({ theme, toggleDarkMode }) {
               </ul>
             </div>
             <div className="w-7 flex justify-end">
-              <DarkModeSwitch
-                checked={
-                  theme === null ? true : theme === "dark" ? true : false
-                }
-                onChange={toggleDarkMode}
-                size={19}
-              />
+              {!loading && (
+                <DarkModeSwitch
+                  checked={
+                    theme === null ? true : theme === 'dark' ? true : false
+                  }
+                  onChange={toggleDarkMode}
+                  size={19}
+                />
+              )}
             </div>
             <div
               className="md:hidden flex flex-col items-start text-[1.9rem] ml-2"
-             onClick={toggleSidebar}
+              onClick={toggleSidebar}
             >
-              <i className='bx bx-menu-alt-left'></i>
+              <i className="bx bx-menu-alt-left"></i>
             </div>
           </div>
         </div>

@@ -1,17 +1,17 @@
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { Fade } from "react-awesome-reveal";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import blur from "../../../assets/images/blur.webp";
-import useWindowDimensions from "../../../hook/getWindowDimensions";
-import projectList from "../../../utils/projectList";
-import ProjectModal from "./projectModal";
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import useWindowDimensions from '@/hook/getWindowDimensions';
+import blur from '@/assets/images/blur.webp';
+import projectList from '@/utils/projectList';
+import ProjectModal from './projectModal';
 
 export default function Projects({ items }) {
   const [open, setOpen] = useState(false);
-  const [projectId, setProjectId] = useState("");
-  const handleOpen = (id) => {
+  const [projectId, setProjectId] = useState('');
+  const handleOpen = id => {
     setOpen(true);
     setProjectId(id);
   };
@@ -21,7 +21,7 @@ export default function Projects({ items }) {
   const { width } = useWindowDimensions();
 
   let slice;
-  if (path === "/" && projectList.length > 9) {
+  if (path === '/' && projectList.length > 9) {
     slice = projectList.slice(0, 9);
   } else {
     slice = items;
@@ -63,7 +63,7 @@ export default function Projects({ items }) {
                     </div>
                     <div className="text-center text-sm">
                       {category.map((cat, idx) => (
-                        <span key={idx}>{(idx ? ", " : "") + cat}</span>
+                        <span key={idx}>{(idx ? ', ' : '') + cat}</span>
                       ))}
                     </div>
                   </div>

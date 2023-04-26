@@ -1,8 +1,7 @@
-import React from "react";
-import { Fade, Zoom } from "react-reveal";
-import Icon from "../../../assets/images/university.png";
-import useWindowDimensions from "../../../hook/getWindowDimensions";
-import Image from "next/image";
+import Image from 'next/image';
+import { Fade, Zoom } from 'react-reveal';
+import useWindowDimensions from '@/hook/getWindowDimensions';
+import Icon from '@/assets/images/university.png';
 
 export default function Education({ education }) {
   const {
@@ -20,7 +19,13 @@ export default function Education({ education }) {
       <div className="p-6 flex items-center">
         <div className=" mr-6 hidden lg:block overflow-hidden">
           <Zoom>
-            <Image src={Icon} alt="work_ico" className="w-64" height={0} width={0} />
+            <Image
+              src={Icon}
+              alt="work_ico"
+              className="w-64"
+              height={0}
+              width={0}
+            />
           </Zoom>
         </div>
         <div className="w-full">
@@ -38,7 +43,7 @@ export default function Education({ education }) {
                           <i className="bx bxs-graduation"></i> {position}
                         </span>
                         <span className="inline-flex items-center capitalize gap-1">
-                          <i className="fa-solid fa-location-dot text-xs"></i>{" "}
+                          <i className="fa-solid fa-location-dot text-xs"></i>{' '}
                           {location}
                         </span>
                       </div>

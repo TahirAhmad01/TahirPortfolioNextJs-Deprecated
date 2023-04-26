@@ -2,8 +2,8 @@ import menuList from '@/utils/manuList';
 import { Drawer } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
-import useWindowDimensions from '../../hook/getWindowDimensions';
 import { useRouter } from 'next/router';
+import useWindowDimensions from '@/hook/getWindowDimensions';
 
 export default function MobileDrawer({ setSidebar, isOpen }) {
   const { width } = useWindowDimensions();
@@ -52,11 +52,17 @@ export default function MobileDrawer({ setSidebar, isOpen }) {
                   className="capitalize font-medium text-gray-800 hover:text-mainColor  dark:text-white"
                   onClick={closeSidebar}
                 >
-                  <ul className="w-full py-2 px-2 my-1"><li  className={`py-1 px-4 block w-full capitalize rounded-lg overflow-hidden ${
-                          path === menu?.link || path === menu?.link + "/"
-                            ? "bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white"
-                            : "active:bg-gray-300 dark:active:bg-gray-600"
-                        }`}>{menu.name}</li></ul>
+                  <ul className="w-full py-2 px-2 my-1">
+                    <li
+                      className={`py-1 px-4 block w-full capitalize rounded-lg overflow-hidden ${
+                        path === menu?.link || path === menu?.link + '/'
+                          ? 'bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white'
+                          : 'active:bg-gray-300 dark:active:bg-gray-600'
+                      }`}
+                    >
+                      {menu.name}
+                    </li>
+                  </ul>
                 </Link>
               ))}
             </div>
