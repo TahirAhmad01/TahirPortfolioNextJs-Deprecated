@@ -1,4 +1,4 @@
-import skillList from "./skillData"
+import skillList from "@/utils/skillData"
 
 export default function SkillData (req, res) {
     if(req.method === "POST"){
