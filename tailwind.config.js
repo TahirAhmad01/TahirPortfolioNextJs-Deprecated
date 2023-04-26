@@ -15,7 +15,12 @@ module.exports = withMT({
     "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'darkBgImg': "url('./../images/dark.jpg')",
+        'lightBgImg': "url(./../images/light.jpg')",
+      }
+    },
     fontFamily: {
       sans: ["Nunito Sans", ...defaultTheme.fontFamily.sans],
       ubutu: ["Ubuntu", "sans-serif"],
@@ -51,21 +56,21 @@ module.exports = withMT({
         },
       });
       addUtilities({
-        ".containerCustom": {},
+        '.containerCustom': {},
 
-        ".gap": {
-          paddingTop: "55px",
-          paddingBottom: "55px",
+        '.gap': {
+          paddingTop: '55px',
+          paddingBottom: '55px',
         },
 
-        ".lightBg": {
+        '.lightBg': {
           backgroundImage:
-            "radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,229,168,1) 0%, rgba(251,174,222,1) 100.7% )",
+            'linear-gradient(150deg,#BBC8EA,#CEC0D1,#D7ABC2,#CD8FB8,#B672BF)',
         },
 
-        ".darkBg": {
+        '.darkBg': {
           backgroundImage:
-            "radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,130,159,1) 0%, rgba(103,56,96,1) 90% )",
+            'linear-gradient(150deg,#072847, #0E2F50,#2A4B5E,#39545F,#545F59,#636155,#885C41,#91583B,#9C4F33)',
         },
       });
     }),

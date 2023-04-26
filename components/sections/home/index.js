@@ -19,7 +19,7 @@ export default function Home() {
       }`}
     >
       {/* // */}
-      <div className="w-full h-full background">
+      <div className="w-full h-full background bg-lightBgImg dark:bg-darkBgImg">
         {' '}
         <div className="h-auto md:h-full bg-black/15 pt-24 py-8 containerCustom relative z-10">
           <div className="backdrop-blur-xl bg-white/60 dark:bg-[#0b1327]/80 rounded-2xl h-full w-full relative overflow-hidden">

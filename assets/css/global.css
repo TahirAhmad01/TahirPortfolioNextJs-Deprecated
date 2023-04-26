@@ -20,7 +20,7 @@
   }
 
   .background {
-    @apply bg-[url("./../images/light.jpg")] dark:bg-[url("./../images/dark.jpg")] bg-cover;
+    @apply bg-cover;
   }
 
   .customButton {

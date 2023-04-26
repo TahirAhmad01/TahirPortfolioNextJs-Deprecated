@@ -16,7 +16,10 @@ export default function Document() {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="author" content="Qubartech Tahir Ahmad" />
-        <meta name="description" content="Hello! I Am Tahir Ahmad. I am web developer....." />
+        <meta
+          name="description"
+          content="Hello! I Am Tahir Ahmad. I am web developer....."
+        />
         <meta
           name="keywords"
           content="Qubartech, tech, tech company, technology, Tahir Ahamd, portfolio"
@@ -28,6 +31,7 @@ export default function Document() {
         <script
           src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
           async
+          crossorigin
         ></script>
         <script
           src="https://kit.fontawesome.com/f70f4c2534.js"
