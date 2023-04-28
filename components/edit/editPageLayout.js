@@ -4,7 +4,7 @@ import Breadcrumb from './breadcrumb';
 function EditPageLayout({ PageName, children }) {
   return (
     <PageLayout>
-      <div className="containerCustom pt-4 pb-14">
+      <div className="containerCustom pt-5 pb-9">
         <Breadcrumb pageName={PageName} />
         {children}
       </div>
