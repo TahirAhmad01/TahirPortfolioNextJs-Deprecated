@@ -1,8 +1,10 @@
-import { Head, Html, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from 'next/document';
 
 export default function Document() {
+  const theme = typeof window !== 'undefined' && localStorage.getItem('theme');
+
   return (
-    <Html className="dark">
+    <Html className={`${theme === 'light' ? 'light' : 'dark'} scroll-smooth`}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" sizes="16x16" href="/favicon.ico" />
