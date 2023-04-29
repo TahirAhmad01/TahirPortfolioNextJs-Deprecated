@@ -1,65 +1,81 @@
 [
   {
+    "id": 1,
     "name": "Html",
     "progress": 90
   },
   {
+    "id": 2,
     "name": "css",
     "progress": 85
   },
   {
+    "id": 3,
     "name": "Javascript",
     "progress": 85
   },
   {
+    "id": 4,
     "name": "JQuery",
     "progress": 85
   },
   {
+    "id": 5,
     "name": "Sass",
     "progress": 75
   },
   {
+    "id": 6,
     "name": "Materialize",
     "progress": 65
   },
   {
+    "id": 7,
     "name": "Bootstrap",
     "progress": 80
   },
   {
+    "id": 8,
     "name": "Tailwind",
     "progress": 80
   },
   {
+    "id": 9,
     "name": "React",
     "progress": 85
   },
   {
+    "id": 10,
     "name": "Next",
     "progress": 65
   },
   {
+    "id": 11,
     "name": "git",
     "progress": 85
   },
   {
+    "id": 12,
     "name": "github",
     "progress": 85
   },
   {
+    "id": 13,
     "name": "Figme",
     "progress": 75
   },
   {
+    "id": 14,
     "name": "Adobe xd",
     "progress": 55
   },
   {
+    "id": 15,
     "name": "Adobe Photoshop",
     "progress": 35
   },
   {
+    "id": 16,
     "name": "Adobe Illustrator",
     "progress": 25
   }

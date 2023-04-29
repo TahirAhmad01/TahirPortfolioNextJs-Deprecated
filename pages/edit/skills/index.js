@@ -5,8 +5,19 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function EditSkills() {
+  const [skillData, setData] = useState([]);
   const [open, setOpen] = useState(false);
   const [addOrEdit, setDec] = useState('');
+  const [editVal, setEditVal] = useState({
+    name: '',
+    progress: '',
+  });
+  const [addData, setAddData] = useState({
+    name: '',
+    progress: '',
+  });
+
+  const LastData = skillData?.slice(-1)[0];
 
   const handleOpen = modal => {
     setOpen(true);
@@ -17,12 +28,29 @@ function EditSkills() {
     }
   };
 
-  const [skillData, setData] = useState([]);
-  useEffect(() => {
+  const getSkills = () => {
     axios.get('/api/skillDataApi').then(res => {
       // console.log(res.data);
       setData(res.data);
     });
+  };
+
+  const submitAddData = arrData => {
+    // console.log(userVal);fsdf
+    axios
+      .post('/api/skillDataApi', arrData, {
+        headers: {
+          'content-type': 'application/json',
+        },
+      })
+      .then(response => {
+        getSkills();
+        setOpen(false);
+      });
+  };
+
+  useEffect(() => {
+    getSkills();
   }, []);
 
   return (
@@ -59,13 +87,28 @@ function EditSkills() {
                     </th>
                     <td className="px-6 py-4">{progress}</td>
                     <td className="px-6 py-4">
-                      <a
-                        href="#"
+                      <span
                         className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        onClick={() => handleOpen('edit')}
+                        onClick={() => {
+                          handleOpen('edit');
+                          setEditVal({
+                            name: name,
+                            progress: progress,
+                          });
+                        }}
                       >
                         Edit
-                      </a>
+                      </span>
+                      <span
+                        className="font-medium text-red-600 dark:text-red-500 hover:underline ml-3"
+                        onClick={() => {
+                          submitAddData([
+                            skillData.filter(item => item.id === idx),
+                          ]);
+                        }}
+                      >
+                        Delete
+                      </span>
                     </td>
                   </tr>
                 );
@@ -82,17 +125,43 @@ function EditSkills() {
               add data
             </div>
             <div>
-              <form>
+              <form
+                onSubmit={e => {
+                  e.preventDefault();
+                  submitAddData([
+                    ...skillData,
+                    {
+                      id: LastData?.id + 1,
+                      name: addData.name,
+                      progress: addData.progress,
+                    },
+                  ]);
+                }}
+              >
                 <input
                   type="text"
                   className="w-full my-2 rounded-md px-3 py-2 border border-gray-300"
                   placeholder="Name"
+                  value={addData?.Name}
+                  onChange={e => {
+                    setAddData({
+                      ...addData,
+                      name: e.target.value,
+                    });
+                  }}
                   required
                 />
                 <input
                   type="number"
                   className="w-full my-2 rounded-md px-3 py-2 border border-gray-300"
                   placeholder="Progress"
+                  value={addData?.progress}
+                  onChange={e => {
+                    setAddData({
+                      ...addData,
+                      progress: e.target.value,
+                    });
+                  }}
                   required
                 />
                 <button
@@ -105,9 +174,33 @@ function EditSkills() {
             </div>
           </div>
         ) : (
-          <div ClassName="text-2xl font-semibold capitalize text-center mb-2">
-            Edit data
-          </div>
+          <>
+            <div ClassName="text-2xl font-semibold capitalize text-center mb-2">
+              Edit data
+            </div>
+            <form>
+              <input
+                type="text"
+                className="w-full my-2 rounded-md px-3 py-2 border border-gray-300"
+                placeholder="Name"
+                value={editVal?.name}
+                required
+              />
+              <input
+                type="number"
+                className="w-full my-2 rounded-md px-3 py-2 border border-gray-300"
+                placeholder="Progress"
+                value={editVal?.progress}
+                required
+              />
+              <button
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none mt-3"
+              >
+                Save
+              </button>
+            </form>
+          </>
         )}
       </EditModal>
     </EditPageLayout>
