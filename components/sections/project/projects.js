@@ -38,7 +38,7 @@ export default function Projects({ items }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1.2s }}
+              transition={{ duration: 1.2 }}
             >
               <div
                 className="relative projectBtn w-full object-contain  overflow-hidden hover:cursor-pointer h-64 sm:h-52 lg:h-56 "
