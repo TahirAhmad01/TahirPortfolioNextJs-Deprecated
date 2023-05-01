@@ -1,6 +1,7 @@
 import EditCard from '@/components/edit/editCard';
 import EditModal from '@/components/edit/editModal';
 import EditPageLayout from '@/components/edit/editPageLayout';
+import ModalInput from '@/components/edit/modalInput';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -9,6 +10,7 @@ function EditSkills() {
   const [open, setOpen] = useState(false);
   const [addOrEdit, setDec] = useState('');
   const [editVal, setEditVal] = useState({
+    id: '',
     name: '',
     progress: '',
   });
@@ -30,7 +32,7 @@ function EditSkills() {
 
   const getSkills = () => {
     axios.get('/api/skillDataApi').then(res => {
-      // console.log(res.data);
+      console.log(res);
       setData(res.data);
     });
   };
@@ -44,7 +46,8 @@ function EditSkills() {
         },
       })
       .then(response => {
-        getSkills();
+        console.log(response)
+        setData(response.data);
         setOpen(false);
       });
   };
@@ -52,6 +55,14 @@ function EditSkills() {
   useEffect(() => {
     getSkills();
   }, []);
+
+  const editData = (obj) => {
+    const objIndex = obj.id - 1 ;
+    skillData[objIndex].name = obj.name;
+    skillData[objIndex].progress = Number(obj.progress)
+    // console.log(skillData)   
+    submitAddData(skillData)
+  }
 
   return (
     <EditPageLayout>
@@ -73,7 +84,7 @@ function EditSkills() {
             </thead>
             <tbody>
               {skillData.map((skill, idx) => {
-                const { name, progress } = skill || {};
+                const { id, name, progress } = skill || {};
                 return (
                   <tr
                     className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
@@ -92,6 +103,7 @@ function EditSkills() {
                         onClick={() => {
                           handleOpen('edit');
                           setEditVal({
+                            id: id,
                             name: name,
                             progress: progress,
                           });
@@ -102,9 +114,9 @@ function EditSkills() {
                       <span
                         className="font-medium text-red-600 dark:text-red-500 hover:underline ml-3"
                         onClick={() => {
-                          submitAddData([
-                            skillData.filter(item => item.id === idx),
-                          ]);
+                          submitAddData(
+                            skillData.filter(item => item.id !== skill.id),
+                          );
                         }}
                       >
                         Delete
@@ -132,13 +144,13 @@ function EditSkills() {
                     ...skillData,
                     {
                       id: LastData?.id + 1,
-                      name: addData.name,
-                      progress: addData.progress,
+                      name: addData?.name,
+                      progress: addData?.progress,
                     },
                   ]);
                 }}
               >
-                <input
+                <ModalInput
                   type="text"
                   className="w-full my-2 rounded-md px-3 py-2 border border-gray-300"
                   placeholder="Name"
@@ -151,7 +163,7 @@ function EditSkills() {
                   }}
                   required
                 />
-                <input
+                <ModalInput
                   type="number"
                   className="w-full my-2 rounded-md px-3 py-2 border border-gray-300"
                   placeholder="Progress"
@@ -175,22 +187,28 @@ function EditSkills() {
           </div>
         ) : (
           <>
-            <div ClassName="text-2xl font-semibold capitalize text-center mb-2">
+            <div className="text-2xl font-semibold capitalize text-center mb-2">
               Edit data
             </div>
-            <form>
-              <input
+            <form onSubmit={e => {e.preventDefault();editData(editVal)}}>
+              <ModalInput
                 type="text"
                 className="w-full my-2 rounded-md px-3 py-2 border border-gray-300"
                 placeholder="Name"
                 value={editVal?.name}
+                onChange={e => {
+                  setEditVal({ ...editVal, name: e.target.value });
+                }}
                 required
               />
-              <input
+              <ModalInput
                 type="number"
                 className="w-full my-2 rounded-md px-3 py-2 border border-gray-300"
                 placeholder="Progress"
                 value={editVal?.progress}
+                onChange={e => {
+                  setEditVal({ ...editVal, progress: e.target.value });
+                }}
                 required
               />
               <button

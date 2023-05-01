@@ -9,12 +9,16 @@ export default function SkillData(req, res) {
     //   const newUser = getUser;
     skillList.push(getSkillsList);
 
-    fs.writeFile('./utils/skillData.json', JSON.stringify(getSkillsList), err => {
-      if (err) throw err;
-      console.log('File modified');
-    });
+    fs.writeFile(
+      './utils/skillData.json',
+      JSON.stringify(getSkillsList),
+      err => {
+        if (err) throw err;
+        console.log('File modified');
+      },
+    );
     // });
 
-    res.status(200).json({ data: getSkillsList });
+    res.status(200).json(getSkillsList);
   }
 }

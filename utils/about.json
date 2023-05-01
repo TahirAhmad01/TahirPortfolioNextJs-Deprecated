@@ -5,7 +5,7 @@
   "information": [
     { "id": 1, "name": "email", "details": "tahirahmad0234@gamil.com" },
     { "id": 2, "name": "phone", "details": "+8801610881871" },
-    { "id": 3, "name": "phone", "details": "Rajshahi, Bangladesh" },
+    { "id": 3, "name": "address", "details": "Rajshahi, Bangladesh" },
     { "id": 4, "name": "status", "details": "Available" }
   ]
 }
