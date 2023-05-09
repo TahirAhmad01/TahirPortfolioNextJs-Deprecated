@@ -1,15 +1,14 @@
-import { Box, Modal, Typography } from "@mui/material";
-import React from "react";
-import projectList from "../../../utils/projectList";
-import Image from "next/image";
+import { Box, Modal, Typography } from '@mui/material';
+import Image from 'next/image';
+import projectList from '../../../utils/projectList';
 
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  maxHeight: "90vh",
-  border: "none",
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  maxHeight: '90vh',
+  border: 'none',
   boxShadow: 90,
   p: 1,
 };
@@ -17,9 +16,7 @@ const style = {
 function ProjectModal({ setOpen, open, projectId }) {
   const handleClose = () => setOpen(false);
 
-  const findProject = projectList.filter(
-    (project) => project?.id === projectId
-  );
+  const findProject = projectList.filter(project => project?.id === projectId);
 
   let content = null;
 
@@ -80,19 +77,22 @@ function ProjectModal({ setOpen, open, projectId }) {
               {link && (
                 <a href={link} target="_blank" rel="noreferrer">
                   <button className="bg-[#7c3aed] hover:bg-[#5b21b6] text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
-                    <i className="fa-solid fa-share-from-square mr-2"></i>
+                    <i
+                      aria-hidden
+                      className="fa-solid fa-share-from-square mr-2"
+                    ></i>
                     <span>Live Preview</span>
                   </button>
                 </a>
-              )}{" "}
+              )}{' '}
               {source && (
                 <a href={source} target="_blank" rel="noreferrer">
                   <button className="bg-[#475569] hover:bg-[#334155] text-sm text-white font-medium py-2 px-3 rounded-lg inline-flex items-center">
-                    <i className="fa-brands fa-github mr-2"></i>
+                    <i aria-hidden className="fa-brands fa-github mr-2"></i>
                     <span>Github</span>
                   </button>
                 </a>
-              )}{" "}
+              )}{' '}
             </div>
           )}
         </div>
@@ -116,7 +116,7 @@ function ProjectModal({ setOpen, open, projectId }) {
             className="absolute top-3 right-3 h-8 w-8 dark:bg-[#464f56] bg-gray-200 hover:bg-gray-300 dark:hover:bg-[#27282f] dark:text-white text-gray-700 rounded-full"
             onClick={handleClose}
           >
-            <i className="fa-solid fa-xmark"></i>
+            <i aria-hidden className="fa-solid fa-xmark"></i>
           </button>
           {content}
         </Box>

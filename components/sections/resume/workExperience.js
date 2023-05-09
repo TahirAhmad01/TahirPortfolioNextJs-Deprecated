@@ -1,8 +1,8 @@
+import Icon from '@/assets/images/work.webp';
+import useWindowDimensions from '@/hook/getWindowDimensions';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Fade, Zoom } from 'react-reveal';
-import useWindowDimensions from '@/hook/getWindowDimensions';
-import Icon from '@/assets/images/work.webp';
 import CertificateModal from './certificateModal';
 
 export default function WorkExperience({ work }) {
@@ -52,10 +52,14 @@ export default function WorkExperience({ work }) {
                     <Fade left delay={150}>
                       <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
                         <span className="inline-flex items-center capitalize gap-1">
-                          <i className="bx bxs-briefcase-alt-2"></i> {position}
+                          <i aria-hidden className="bx bxs-briefcase-alt-2"></i>{' '}
+                          {position}
                         </span>
                         <span className="inline-flex items-center capitalize gap-1">
-                          <i className="fa-solid fa-location-dot text-xs"></i>{' '}
+                          <i
+                            aria-hidden
+                            className="fa-solid fa-location-dot text-xs"
+                          ></i>{' '}
                           {location}
                         </span>
                       </div>
@@ -71,7 +75,10 @@ export default function WorkExperience({ work }) {
                   >
                     <div className=" flex items-center ">
                       <div className="mr-1">
-                        <i className="fa-regular fa-calendar-days text-xs"></i>
+                        <i
+                          aria-hidden
+                          className="fa-regular fa-calendar-days text-xs"
+                        ></i>
                       </div>
                       <div>{startDate}</div>
                       <div className="mx-1"> - </div>

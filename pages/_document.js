@@ -33,10 +33,10 @@ export default function Document() {
         <script
           src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
           async
-          
         ></script>
         <script
           src="https://kit.fontawesome.com/f70f4c2534.js"
+          aria-hidden="false"
           async
         ></script>
       </Head>

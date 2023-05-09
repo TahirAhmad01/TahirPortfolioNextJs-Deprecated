@@ -1,14 +1,13 @@
-import { Box, Modal } from "@mui/material";
-import Image from "next/image";
-import React from "react";
+import { Box, Modal } from '@mui/material';
+import Image from 'next/image';
 
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  maxHeight: "90vh",
-  border: "none",
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  maxHeight: '90vh',
+  border: 'none',
   boxShadow: 90,
 };
 
@@ -26,7 +25,15 @@ function CertificateModal({ setOpen, open, contents }) {
 
     return (
       <div className="overflow-auto scrollbar-hide rounded-lg" key={idx}>
-        <Image loader= {() => src} src={src} alt={title} key={idx} width={0} height={0} className="w-full h-auto"/>
+        <Image
+          loader={() => src}
+          src={src}
+          alt={title}
+          key={idx}
+          width={0}
+          height={0}
+          className="w-full h-auto"
+        />
       </div>
     );
   });
@@ -55,7 +62,7 @@ function CertificateModal({ setOpen, open, contents }) {
               className="h-8 w-8 dark:bg-[#464f56] bg-gray-200 hover:bg-gray-300 dark:hover:bg-[#27282f] dark:text-white text-gray-700 rounded-full"
               onClick={handleClose}
             >
-              <i className="fa-solid fa-xmark"></i>
+              <i aria-hidden className="fa-solid fa-xmark"></i>
             </button>
           </div>
           <div className="px-2 py-2">{content}</div>

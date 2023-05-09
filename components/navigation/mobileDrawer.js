@@ -1,9 +1,9 @@
+import useWindowDimensions from '@/hook/getWindowDimensions';
 import menuList from '@/utils/manuList';
 import { Drawer } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import useWindowDimensions from '@/hook/getWindowDimensions';
 
 export default function MobileDrawer({ setSidebar, isOpen }) {
   const { width } = useWindowDimensions();
@@ -40,7 +40,7 @@ export default function MobileDrawer({ setSidebar, isOpen }) {
             <div className="text-2xl pb-4 pt-5 bg-gray-50 dark:bg-[#111827] flex items-center px-4 justify-between font-medium border dark:border-gray-900">
               <div>Menu</div>
               <div onClick={closeSidebar} className="text-[1.7rem]">
-                <i className="bx bx-x"></i>
+                <i aria-hidden className="bx bx-x"></i>
               </div>
             </div>
 

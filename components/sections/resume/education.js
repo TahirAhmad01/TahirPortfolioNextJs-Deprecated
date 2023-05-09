@@ -1,7 +1,7 @@
+import Icon from '@/assets/images/university.png';
+import useWindowDimensions from '@/hook/getWindowDimensions';
 import Image from 'next/image';
 import { Fade, Zoom } from 'react-reveal';
-import useWindowDimensions from '@/hook/getWindowDimensions';
-import Icon from '@/assets/images/university.png';
 
 export default function Education({ education }) {
   const {
@@ -40,10 +40,14 @@ export default function Education({ education }) {
                     <Fade left delay={150}>
                       <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
                         <span className="inline-flex items-center capitalize gap-1">
-                          <i className="bx bxs-graduation"></i> {position}
+                          <i aria-hidden className="bx bxs-graduation"></i>{' '}
+                          {position}
                         </span>
                         <span className="inline-flex items-center capitalize gap-1">
-                          <i className="fa-solid fa-location-dot text-xs"></i>{' '}
+                          <i
+                            aria-hidden
+                            className="fa-solid fa-location-dot text-xs"
+                          ></i>{' '}
                           {location}
                         </span>
                       </div>
@@ -59,7 +63,10 @@ export default function Education({ education }) {
                   >
                     <div className=" flex items-center ">
                       <div className="mr-1">
-                        <i className="fa-regular fa-calendar-days text-xs"></i>
+                        <i
+                          aria-hidden
+                          className="fa-regular fa-calendar-days text-xs"
+                        ></i>
                       </div>
                       <div>{startDate}</div>
                       <div className="mx-1"> - </div>

@@ -67,9 +67,7 @@ export default function Navbar({ theme, toggleDarkMode, loading }) {
             <div className="w-7 flex justify-end">
               {loading && (
                 <DarkModeSwitch
-                  checked={
-                    theme === 'dark' ? true : false
-                  }
+                  checked={theme === 'dark' ? true : false}
                   onChange={toggleDarkMode}
                   size={19}
                 />
@@ -79,7 +77,7 @@ export default function Navbar({ theme, toggleDarkMode, loading }) {
               className="md:hidden flex flex-col items-start text-[1.9rem] ml-2"
               onClick={toggleSidebar}
             >
-              <i className="bx bx-menu-alt-left"></i>
+              <i aria-hidden className="bx bx-menu-alt-left"></i>
             </div>
           </div>
         </div>

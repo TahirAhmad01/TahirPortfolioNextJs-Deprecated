@@ -1,10 +1,10 @@
+import avatar from '@/assets/images/avater.webp';
+import useWindowDimensions from '@/hook/getWindowDimensions';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fade } from 'react-reveal';
 import Typed from 'react-typed';
 import Wave from 'react-wavify';
-import useWindowDimensions from '@/hook/getWindowDimensions';
-import avatar from '@/assets/images/avater.webp';
 import SocialBtn from '../../socialBtn';
 import socialBtnList from './../../../utils/socialBtnList.json';
 import Button from './button';
@@ -26,8 +26,8 @@ export default function Home() {
             <div
               className={`flex items-center justify-center flex-col overflow-hidden h-full w-full relative z-20 pt-20 md:pb-28 pb-32`}
             >
-              <div className="h-28 w-28 md:h-36 md:w-36 overflow-hidden rounded-full bg-white mb-4">
-                <Image src={avatar} alt="avatar" height={0} width={0} />
+              <div className="relative h-28 w-28 md:h-36 md:w-36 overflow-hidden rounded-full bg-white mb-4">
+                <Image src={avatar} alt="avatar" fill={true} priority={true} />
               </div>
               <h2 className="text-3xl md:text-4xl font-medium pb-4 pt-2 ">
                 <Fade up cascade>
