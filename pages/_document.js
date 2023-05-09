@@ -36,7 +36,7 @@ export default function Document() {
         ></script>
         <script
           src="https://kit.fontawesome.com/f70f4c2534.js"
-          aria-hidden="false"
+          aria-hidden
           async
         ></script>
       </Head>
