@@ -9,11 +9,7 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import MobileDrawer from './mobileDrawer';
 
 export default function Navbar({ theme, toggleDarkMode, loading }) {
-  const [toggleEvent, setToggleEvent] = useState(0);
-
   const { width } = useWindowDimensions();
-
-  const toggle = () => setToggleEvent(Date.now());
 
   const location = useRouter();
   const path = location.pathname;
@@ -69,10 +65,10 @@ export default function Navbar({ theme, toggleDarkMode, loading }) {
               </ul>
             </div>
             <div className="w-7 flex justify-end">
-              {!loading && (
+              {loading && (
                 <DarkModeSwitch
                   checked={
-                    theme === null ? true : theme === 'dark' ? true : false
+                    theme === 'dark' ? true : false
                   }
                   onChange={toggleDarkMode}
                   size={19}
@@ -87,40 +83,7 @@ export default function Navbar({ theme, toggleDarkMode, loading }) {
             </div>
           </div>
         </div>
-        {/* <SlideToggle duration={500} toggleEvent={toggleEvent} collapsed>
-          {({ setCollapsibleElement }) => (
-            <div className={`${width > 768 && "hidden"}`}>
-              <div
-                className={`transition-all containerCustom my-collapsible__content `}
-                ref={setCollapsibleElement}
-              >
-                <ul className="pt-5 ">
-                  {menuList.map((menu, idx) => (
-                    <Link
-                      href={menu?.link}
-                      onClick={() => {
-                        toggle();
-                        toggleMenu();
-                      }}
-                      key={idx}
-                    >
-                      <li
-                        key={idx}
-                        className={`py-1 px-4 block w-full capitalize rounded-lg overflow-hidden ${
-                          path === menu?.link || path === menu?.link + "/"
-                            ? "bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white"
-                            : "active:bg-gray-300 dark:active:bg-gray-600"
-                        }`}
-                      >
-                        {menu.name}
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-        </SlideToggle> */}
+
         <MobileDrawer setSidebar={setSidebarOpen} isOpen={isSidebarOpen} />
       </div>
     </React.Fragment>
