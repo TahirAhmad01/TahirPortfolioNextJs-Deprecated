@@ -22,7 +22,7 @@ function EditModal({ open, setOpen, children }) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style} className="rounded-lg">
+      <Box sx={style} className="rounded-lg dark:text-black">
         {children}
       </Box>
     </Modal>
