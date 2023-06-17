@@ -26,7 +26,7 @@ export default function Skill() {
             return (
               <div className="my-5" key={idx}>
                 <Fade up delay={idx * 20} cascade>
-                  <div className="mb-1 capitalize text-sm dark:text-gray-100">{name}</div>
+                  <div className="mb-1 capitalize text-xs font-medium dark:text-gray-100">{name}</div>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
                     {list?.map((list, idx) => {
                       const { name, icon,position,progress } = list || {};

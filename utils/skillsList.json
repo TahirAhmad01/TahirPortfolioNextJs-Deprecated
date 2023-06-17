@@ -157,7 +157,7 @@
     ]
   },
   {
-    "name": "Web",
+    "name": "Web Browser",
     "list": [
       {
         "id": 1,
@@ -197,7 +197,7 @@
         "name": "Safari",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/safari/safari-original.svg",
         "position":"expert",
-        "progress": 90
+        "progress": 80
       }
     ]
   },
