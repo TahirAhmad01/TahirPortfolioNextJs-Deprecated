@@ -8,7 +8,7 @@ export default function ContactInp({ delay, type, placeholder, ...rest }) {
         <input
           type={type}
           placeholder={placeholder}
-          className="w-full rounded-md shadow-md  border-1 border-gray-200 focus:border-transparent focus:outline-transparent focus:ring-0 p-3 text-black"
+          className="w-full rounded-md shadow-md  border-1 border-gray-200 focus:border-transparent focus:outline-transparent focus:ring-0 p-3 text-black dark:bg-[#263249] dark:text-white dark:border-gray-600"
           {...rest}
         />
       </Fade>

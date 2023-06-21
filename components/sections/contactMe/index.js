@@ -126,7 +126,7 @@ export default function ContactMe() {
               <div className="w-full  my-4 flex-1">
                 <Fade up delay={240}>
                   <textarea
-                    className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 text-black focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-full lg:min-h-full"
+                    className="w-full  rounded-md shadow-md pr-5 border-1 border-gray-200 focus:border-transparent focus:outline-transparent focus:ring-0 min-h-[200px] md:min-h-full lg:min-h-full text-black dark:bg-[#263249] dark:text-white dark:border-gray-600"
                     placeholder="Your Message"
                     name="message"
                     required
