@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import MobileDrawer from './mobileDrawer';
+import NextTopLoader from 'nextjs-toploader';
 
 export default function Navbar({ theme, toggleDarkMode, loading }) {
   const { width } = useWindowDimensions();
@@ -83,6 +84,17 @@ export default function Navbar({ theme, toggleDarkMode, loading }) {
         </div>
 
         <MobileDrawer setSidebar={setSidebarOpen} isOpen={isSidebarOpen} />
+        <NextTopLoader
+          color="#2299DD"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={2}
+          crawl={true}
+          showSpinner={false}
+          easing="ease"
+          speed={200}
+          shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+        />
       </div>
     </React.Fragment>
   );
