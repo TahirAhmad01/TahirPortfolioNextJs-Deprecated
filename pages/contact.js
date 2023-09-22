@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact - Tahir Ahmad</title>
+        <title>Contact - {process.env.name}</title>
       </Head>
 
       <PageLayout>

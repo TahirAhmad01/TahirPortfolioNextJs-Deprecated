@@ -8,8 +8,8 @@ import Navbar from './navigation/nav';
 
 export default function Layout({ children }) {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false)
-  
+  const [mounted, setMounted] = useState(false);
+
   const { scrollY } = useWindowScrollPositions();
   const colorTheme = theme === 'dark' ? 'light' : 'dark';
   const location = useRouter();
@@ -26,8 +26,8 @@ export default function Layout({ children }) {
   };
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <div>
@@ -45,7 +45,7 @@ export default function Layout({ children }) {
             <>
               <WhatsAppWidget
                 phoneNumber="+8801610881871"
-                companyName="Tahir Ahmad"
+                companyName={process.env.name}
                 replyTimeText="Typically replies within an hour"
                 sendButton="send"
                 message="Hello! how can I help you?"
@@ -56,7 +56,7 @@ export default function Layout({ children }) {
         ) : (
           <WhatsAppWidget
             phoneNumber="+8801610881871"
-            companyName="Tahir Ahmad"
+            companyName={process.env.name}
             replyTimeText="Typically replies within an hour"
             sendButton="send"
             message="Hello! how can I help you?"

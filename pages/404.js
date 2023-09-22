@@ -7,7 +7,7 @@ function PageNotFound() {
   return (
     <>
       <Head>
-        <title>404 page not found - Tahir Ahmad</title>
+        <title>404 page not found - {process.env.name}</title>
       </Head>
 
       <PageLayout>

@@ -18,14 +18,14 @@ export default function Document() {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
-        <meta name="author" content="Qubartech Tahir Ahmad" />
+        <meta name="author" content={`Qubartech ${process.env.name}`} />
         <meta
           name="description"
-          content="Hello! I Am Tahir Ahmad. I am web developer....."
+          content={`Hello! I Am ${process.env.name}. I am web developer.....`}
         />
         <meta
           name="keywords"
-          content="Qubartech, tech, tech company, technology, Tahir Ahamd, portfolio"
+          content={`Qubartech, tech, tech company, technology, Tahir Ahmad, ${process.env.name}, ${process.env.fullName} portfolio`}
         />
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"

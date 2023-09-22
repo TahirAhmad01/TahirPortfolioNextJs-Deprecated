@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Tahir Ahmad</title>
+        <title>Projects - {process.env.name}</title>
       </Head>
 
       <PageLayout>

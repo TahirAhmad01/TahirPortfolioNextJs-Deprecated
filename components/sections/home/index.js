@@ -31,7 +31,7 @@ export default function Home() {
               </div>
               <h2 className="text-3xl md:text-4xl font-medium pb-4 pt-2 ">
                 <Fade up cascade>
-                  Tahir Ahmad (Sani)
+                  {process.env.fullName}
                 </Fade>
               </h2>{' '}
               <Typed

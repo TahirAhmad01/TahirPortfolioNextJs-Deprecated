@@ -1,6 +1,6 @@
 import avatar from '@/assets/images/logo.webp';
 import useWindowDimensions from '@/hook/getWindowDimensions';
-import menuList from '@/utils/manuList';
+import menuList from '@/utils/menuList';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -41,7 +41,7 @@ export default function Navbar({ theme, toggleDarkMode, loading }) {
                 </div>
                 <div className="ml-3">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18c8fd] to-purple-600 font-extrabold text-2xl">
-                    Tahir Ahmad
+                    {process.env.name}
                   </span>
                 </div>
               </h4>

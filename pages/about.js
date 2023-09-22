@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Tahir Ahmad</title>
+        <title>About - {process.env.name}</title>
       </Head>
 
       <PageLayout>

@@ -6,7 +6,7 @@ export default function Resume() {
   return (
     <>
       <Head>
-        <title>Resume - Tahir Ahmad</title>
+        <title>Resume - {process.env.name}</title>
       </Head>
       <PageLayout>
         <ResumeSec />

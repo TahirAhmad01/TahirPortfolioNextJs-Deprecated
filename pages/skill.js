@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import Skills from '../components/sections/skill';
 import PageLayout from '../components/pageLayout';
+import Skills from '../components/sections/skill';
 
 export default function Skill() {
   return (
     <>
       <Head>
-        <title>Skill - Tahir Ahmad</title>
+        <title>Skill - {process.env.name}</title>
       </Head>
 
       <PageLayout>

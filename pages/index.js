@@ -13,7 +13,7 @@ export default function Index() {
   return (
     <main>
       <Head>
-        <title>Tahir Ahmad - Portfolio</title>
+        <title>{process.env.name} - Portfolio</title>
       </Head>
 
       <Home />

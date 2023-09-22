@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    name: 'Tahir Ahmad',
+    fullName: 'Tahir Ahmad (Sani)',
+  },
 };
 
 module.exports = nextConfig;
