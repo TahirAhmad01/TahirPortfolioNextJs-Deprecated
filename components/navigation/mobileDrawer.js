@@ -1,5 +1,5 @@
 import useWindowDimensions from '@/hook/getWindowDimensions';
-import menuList from '@/utils/manuList';
+import menuList from '@/utils/menuList';
 import { Drawer } from '@mui/material';
 import Box from '@mui/material/Box';
 import Link from 'next/link';
