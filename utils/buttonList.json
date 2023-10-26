@@ -16,17 +16,32 @@
   },
   {
     "id": 4,
+    "name": "typescript",
+    "category": "typescript"
+  },
+  {
+    "id": 5,
     "name": "jquery",
     "category": "jquery"
   },
   {
-    "id": 5,
+    "id": 6,
+    "name": "tailwind",
+    "category": "tailwind"
+  },
+  {
+    "id": 7,
     "name": "react",
     "category": "react"
   },
   {
-    "id": 6,
+    "id": 8,
     "name": "redux",
     "category": "redux"
+  },
+  {
+    "id": 9,
+    "name": "next",
+    "category": "next"
   }
 ]

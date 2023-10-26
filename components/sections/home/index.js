@@ -66,9 +66,9 @@ export default function Home() {
                   <Button name="Get in touch" />
                 </Link>
 
-                {/* https://drive.google.com/file/d/1zpqEK1QwK2X5cbiMtZoK6GSpIPGjGmIq/view?usp=drive_link */}
+                {/* https://drive.google.com/file/d/1Fk19gxqaJQnGJ8ThNbvC-MySTzK6N57c/view?usp=drive_link */}
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1zpqEK1QwK2X5cbiMtZoK6GSpIPGjGmIq"
+                  href="https://drive.google.com/uc?export=download&id=1Fk19gxqaJQnGJ8ThNbvC-MySTzK6N57c"
                   download
                 >
                   <Button name="Download CV" />
