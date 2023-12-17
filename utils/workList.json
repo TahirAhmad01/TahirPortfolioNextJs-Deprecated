@@ -23,5 +23,15 @@
         "title": "internship certificate"
       }
     ]
+  },
+  {
+    "id": 3,
+    "workTitle": "Nacenia ltd",
+    "startDate": "15-12-2023",
+    "endDate": "Now",
+    "position": "Trainee Software Engineer",
+    "location": "House: 6, 14 Block A, Dhaka 1207",
+    "description": "Ready to embark on this new journey and contribute to cutting-edge projects at the forefront of technology. Grateful for the opportunity and eager to learn and grow with the incredible team at Nascenia.",
+    "certificates": ""
   }
 ]

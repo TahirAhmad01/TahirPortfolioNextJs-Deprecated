@@ -43,6 +43,13 @@ export default function Document() {
           aria-hidden
           async
         ></script>
+        <script
+          id="fiverr-seller-widget-script-19471011-286c-4fdc-9a8d-bbcbccd0d2f1"
+          src="https://widgets.fiverr.com/api/v1/seller/tahirahmad02?widget_id=19471011-286c-4fdc-9a8d-bbcbccd0d2f1"
+          data-config='{"category_name":"\n                                    Programming \u0026 Tech\n\n                            "}'
+          async
+          defer
+        ></script>
       </Head>
       <body>
         <Main />
