@@ -11,9 +11,9 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
 export default function Index() {
-  const DynamicFiverrWidget = dynamic(() => import('@/components/Fiverr'), {
-    ssr: false, // Avoids server-side rendering for this component
-  });
+  // const DynamicFiverrWidget = dynamic(() => import('@/components/Fiverr'), {
+  //   ssr: false, // Avoids server-side rendering for this component
+  // });
 
   return (
     <main>
@@ -28,7 +28,7 @@ export default function Index() {
         <Project />
         <Resume />
         <Blog />
-        <DynamicFiverrWidget />
+        {/* <DynamicFiverrWidget /> */}
         <Testimonial />
         <ContactMe />
       </PageLayout>
