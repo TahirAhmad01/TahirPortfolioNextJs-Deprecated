@@ -6,28 +6,35 @@
         "id": 1,
         "name": "Html",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 90
       },
       {
         "id": 2,
         "name": "css",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 85
       },
       {
         "id": 3,
         "name": "Javascript",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 85
       },
       {
         "id": 4,
+        "name": "Ruby",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg",
+        "position": "expert",
+        "progress": 85
+      },
+      {
+        "id": 5,
         "name": "php",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-        "position":"junior",
+        "position": "junior",
         "progress": 15
       }
     ]
@@ -39,43 +46,50 @@
         "id": 1,
         "name": "React",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 90
       },
       {
         "id": 2,
         "name": "Next.js",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 90
       },
       {
         "id": 3,
         "name": "Node.js",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        "position":"junior",
+        "position": "junior",
         "progress": 30
       },
       {
         "id": 4,
         "name": "JQuery",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 85
       },
       {
         "id": 5,
         "name": "materialui",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 90
       },
       {
         "id": 6,
         "name": "Redux",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 80
+      },
+      {
+        "id": 7,
+        "name": "Ruby on Rails",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain.svg",
+        "position": "expert",
+        "progress": 60
       }
     ]
   },
@@ -85,7 +99,7 @@
       {
         "id": 1,
         "name": "Tailwind",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
         "position":"expert",
         "progress": 90
       },
@@ -112,28 +126,35 @@
         "id": 1,
         "name": "Git",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 90
       },
       {
         "id": 2,
         "name": "Github",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 90
       },
       {
         "id": 3,
         "name": "VS Code",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-        "position":"expert",
+        "position": "expert",
         "progress": 90
       },
       {
         "id": 4,
         "name": "IntelliJ IDEA",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg",
-        "position":"expert",
+        "position": "expert",
+        "progress": 90
+      },
+      {
+        "id": 5,
+        "name": "Ruby Mine",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rubymine/rubymine-original.svg",
+        "position": "expert",
         "progress": 90
       }
     ]
@@ -147,7 +168,8 @@
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
         "position":"expert",
         "progress": 90
-      },{
+      },
+      {
         "id": 2,
         "name": "supabase",
         "icon": "https://i.ibb.co/6vqNfZ5/supabase-logo-DCC676-FFE2-seeklogo-com-1.png",
