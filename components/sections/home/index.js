@@ -36,10 +36,11 @@ export default function Home() {
               </h2>{' '}
               <Typed
                 strings={[
-                  'Web developer',
-                  'Web designer',
+                  'Full-stack Web Developer',
+                  'Javascript Developer',
                   'React Developer',
-                  'UI/UX designer',
+                  'Ruby Developer',
+                  'Web Designer',
                 ]}
                 typeSpeed={90}
                 backSpeed={80}
