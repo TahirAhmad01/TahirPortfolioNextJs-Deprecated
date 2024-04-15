@@ -16,7 +16,12 @@ export default function About() {
         <div className="md:grid items-center md:gap-3 lg:gap-4 grid-cols-9 md:col-start-9">
           <div className="md:col-span-5 lg:col-span-5 lg:pr-28">
             <Fade up cascade>
-              <h3>{heading}</h3> <p className="text-sm">{description}</p>
+              <h3>{heading}</h3>{' '}
+              <p className="text-sm flex flex-col gap-2 text-justify">
+                {description.split('\n').map((line, index) => (
+                  <div key={index}>{line}</div>
+                ))}
+              </p>
               <div className="mt-5">
                 <Fade up>
                   {information?.map((info, idx) => {
