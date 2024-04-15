@@ -4,10 +4,12 @@ import Link from 'next/link';
 import PageLayout from '../components/pageLayout';
 
 function PageNotFound() {
+  const title = `404 page not found  - ${process.env.name}`;
+
   return (
     <>
       <Head>
-        <title>404 page not found - {process.env.name}</title>
+        <title>{title}</title>
       </Head>
 
       <PageLayout>

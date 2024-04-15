@@ -14,11 +14,12 @@ export default function Index() {
   // const DynamicFiverrWidget = dynamic(() => import('@/components/Fiverr'), {
   //   ssr: false, // Avoids server-side rendering for this component
   // });
+  const title = `${process.env.name} - Portfolio`;
 
   return (
     <main>
       <Head>
-        <title>{process.env.name} - Portfolio</title>
+        <title>{title}</title>
       </Head>
 
       <Home />

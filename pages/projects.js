@@ -3,10 +3,12 @@ import Project from "../components/sections/project";
 import PageLayout from "../components/pageLayout";
 
 export default function Projects() {
+  const title = `Projects - ${process.env.name}`;
+
   return (
     <>
       <Head>
-        <title>Projects - {process.env.name}</title>
+        <title>{title}</title>
       </Head>
 
       <PageLayout>

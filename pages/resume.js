@@ -3,10 +3,12 @@ import ResumeSec from '../components/sections/resume';
 import PageLayout from '../components/pageLayout';
 
 export default function Resume() {
+  const title = `Resume - ${process.env.name}`;
+  
   return (
     <>
       <Head>
-        <title>Resume - {process.env.name}</title>
+        <title>{title}</title>
       </Head>
       <PageLayout>
         <ResumeSec />

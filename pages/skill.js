@@ -3,10 +3,12 @@ import PageLayout from '../components/pageLayout';
 import Skills from '../components/sections/skill';
 
 export default function Skill() {
+  const title = `Skill - ${process.env.name}`;
+
   return (
     <>
       <Head>
-        <title>Skill - {process.env.name}</title>
+        <title>{title}</title>
       </Head>
 
       <PageLayout>
