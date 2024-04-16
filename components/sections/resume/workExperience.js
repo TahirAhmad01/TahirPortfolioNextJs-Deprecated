@@ -80,9 +80,9 @@ export default function WorkExperience({ work }) {
                           className="fa-regular fa-calendar-days text-xs"
                         ></i>
                       </div>
-                      <div>{startDate}</div>
+                      <div className="uppercase">{startDate}</div>
                       <div className="mx-1"> - </div>
-                      <div>{endDate}</div>
+                      <div className="uppercase">{endDate}</div>
                     </div>
                   </Fade>
                 </div>
